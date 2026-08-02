@@ -69,10 +69,7 @@ function applyTranslations() {
   // Update dynamic sections
   renderAbout();
   renderSchedule();
-  renderRecommendations();
-  renderAccommodation();
-  renderAdditionalEvents();
-  renderFAQ();
+  renderBarcelona();
   updateGuestRowLabels();
   updateRSVPDeadline();
   updateFooter();
@@ -169,18 +166,12 @@ function initNav() {
 
 function applySectionVisibility() {
   const map = {
-    hero:             '#hero',
-    about:            '#about',
-    venue:            '#venue',
-    schedule:         '#schedule',
-    rsvp:             '#rsvp',
-    accommodation:    '#accommodation',
-    recommendations:  '#recommendations',
-    spotify:          '#spotify',
-    whatsapp:         '#whatsapp',
-    gifts:            '#gifts',
-    additionalEvents: '#additional-events',
-    faq:              '#faq',
+    hero:        '#hero',
+    event:       '#event',
+    rsvp:        '#rsvp',
+    barcelona:   '#barcelona',
+    otherEvents: '#other-events',
+    whatsapp:    '#whatsapp',
   };
 
   const sections = SITE_CONFIG.sections || {};
@@ -282,6 +273,41 @@ function renderAbout() {
       <span class="about-item__text">${escapeHtml(item.text)}</span>
     </li>
   `).join('');
+}
+
+/* ─────────────────────────────────────────────────────────────
+   BARCELONA SECTION
+───────────────────────────────────────────────────────────────*/
+
+function renderBarcelona() {
+  const neighList = document.getElementById('barcelona-neighbourhoods');
+  if (neighList) {
+    const items = t('barcelona.neighbourhoods.items');
+    if (Array.isArray(items)) {
+      neighList.innerHTML = items.map(item => `
+        <div class="neighbourhood-card">
+          <p class="neighbourhood-card__name">${escapeHtml(item.name)}</p>
+          <p class="neighbourhood-card__desc">${escapeHtml(item.desc)}</p>
+        </div>
+      `).join('');
+    }
+  }
+
+  const transportList = document.getElementById('barcelona-transport');
+  if (transportList) {
+    const items = t('barcelona.transport.items');
+    if (Array.isArray(items)) {
+      transportList.innerHTML = items.map(item => `<li>${escapeHtml(item)}</li>`).join('');
+    }
+  }
+
+  const tipsList = document.getElementById('barcelona-tips');
+  if (tipsList) {
+    const items = t('barcelona.tips.items');
+    if (Array.isArray(items)) {
+      tipsList.innerHTML = items.map(item => `<li>${escapeHtml(item)}</li>`).join('');
+    }
+  }
 }
 
 /* ─────────────────────────────────────────────────────────────

@@ -44,18 +44,12 @@ const SITE_CONFIG = {
   // ── Section visibility ────────────────────────────────────────
   // Set false to hide a section completely.
   sections: {
-    hero:             true,
-    about:            true,
-    venue:            true,
-    schedule:         true,
-    rsvp:             true,
-    accommodation:    true,
-    recommendations:  true,
-    spotify:          true,
-    whatsapp:         true,
-    gifts:            true,
-    additionalEvents: true,
-    faq:              true,
+    hero:        true,
+    event:       true,
+    rsvp:        true,
+    barcelona:   true,
+    otherEvents: true,
+    whatsapp:    true,
   },
 
   // ── Schedule ──────────────────────────────────────────────────

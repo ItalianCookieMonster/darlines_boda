@@ -41,6 +41,9 @@ const TRANSLATIONS = {
       faq:             'FAQ',
       menu:            'Menu',
       close:           'Close menu',
+      event:           'The celebration',
+      barcelona:       'Barcelona',
+      otherEvents:     'Before & after',
     },
 
     hero: {
@@ -88,6 +91,16 @@ const TRANSLATIONS = {
         end:      { label: 'Venue closes',            desc: 'Last drinks at the venue.' },
         after:    { label: 'Onwards in Barcelona',    desc: 'No formal plan — keep the evening going wherever it takes you.' },
       },
+    },
+
+    event: {
+      title:    'The celebration',
+      intro:    'Everything you need to know about the day.',
+      location: { title: 'Location' },
+      schedule: { title: 'Schedule' },
+      dresscode:{ title: 'Dress code & vibe' },
+      gifts:    { title: 'Gifts' },
+      spotify:  { title: 'Playlist' },
     },
 
     rsvp: {
@@ -169,6 +182,7 @@ const TRANSLATIONS = {
         message: 'Your RSVP could not be sent. Please try again or contact us directly.',
       },
       devMode: 'RSVP endpoint not configured. Submission logged to console (development mode).',
+      changeNote: 'Need to change your RSVP? Just get in touch with Liam or Valentina directly.',
       validation: {
         required:      'This field is required.',
         emailInvalid:  'Please enter a valid email address.',
@@ -178,6 +192,43 @@ const TRANSLATIONS = {
         nameRequired:  'Please enter a name for each person.',
         noPhone:       'Please provide a phone number for at least one person in your group.',
       },
+    },
+
+    barcelona: {
+      title: 'Barcelona',
+      intro: 'A few things worth knowing to help you plan your time in the city.',
+      neighbourhoods: {
+        title: 'Where to stay',
+        items: [
+          { name: 'El Born / Sant Pere', desc: 'Walking distance from the venue. Lively, full of bars and restaurants. Books up fast.' },
+          { name: 'Barceloneta & Waterfront', desc: 'Right by the sea, 10–15 min walk to the venue. Great if you want beach access.' },
+          { name: 'Eixample', desc: 'Central, well connected by metro. Good range of hotels at different price points.' },
+          { name: 'Gràcia', desc: 'Quieter, neighbourhood feel. A bit further out but easy by metro or taxi.' },
+        ],
+      },
+      transport: {
+        title: 'Getting around',
+        items: [
+          'The venue is well served by public transport — metro lines 4 (Barceloneta) and 3 (Drassanes) are both nearby.',
+          'The T-Casual 10-trip metro card is the most economical option if you\'re using public transport regularly.',
+          'Taxis and Bolt/Cabify are reliable and affordable for late-night journeys.',
+          'The city is very walkable in the centre — most areas around the venue are flat.',
+        ],
+      },
+      tips: {
+        title: 'Good to know',
+        items: [
+          'April in Barcelona is busy. Book accommodation as early as you can — prices rise significantly as the date approaches.',
+          'The weather in April is mild but evenings can be cool. Bring a light jacket.',
+          'Comfortable shoes are a must — both for the event itself and for exploring the city.',
+          'Barcelona is generally very safe, but keep an eye on your belongings in busy tourist areas.',
+        ],
+      },
+    },
+
+    otherEvents: {
+      title:       'Before & after',
+      placeholder: 'We\'re planning a few things around the wedding day — details coming soon.',
     },
 
     accommodation: {
@@ -326,6 +377,9 @@ const TRANSLATIONS = {
       faq:             'Preguntes',
       menu:            'Menú',
       close:           'Tancar menú',
+      event:           'La celebració',
+      barcelona:       'Barcelona',
+      otherEvents:     'Abans i després',
     },
 
     hero: {
@@ -373,6 +427,16 @@ const TRANSLATIONS = {
         end:      { label: 'Tancament del local',       desc: 'Últimes begudes al local.' },
         after:    { label: 'Continuem per Barcelona',   desc: 'Sense pla fix — la nit continua on vulgui.' },
       },
+    },
+
+    event: {
+      title:    'La celebració',
+      intro:    'Tot el que necessiteu saber sobre el dia.',
+      location: { title: 'Lloc' },
+      schedule: { title: 'Programa' },
+      dresscode:{ title: 'Vestimenta i ambient' },
+      gifts:    { title: 'Regals' },
+      spotify:  { title: 'Playlist' },
     },
 
     rsvp: {
@@ -454,6 +518,7 @@ const TRANSLATIONS = {
         message: 'No hem pogut enviar la confirmació. Torneu-ho a provar o contacteu-nos directament.',
       },
       devMode: 'URL del formulari no configurada. La resposta s\'ha registrat a la consola (mode de desenvolupament).',
+      changeNote: 'Necessites canviar la teva confirmació? Posa\'t en contacte directament amb el Liam o la Valentina.',
       validation: {
         required:     'Aquest camp és obligatori.',
         emailInvalid: 'Introduïu una adreça electrònica vàlida.',
@@ -463,6 +528,43 @@ const TRANSLATIONS = {
         nameRequired: 'Introduïu el nom de cada persona.',
         noPhone:      'Si us plau, proporcioneu el telèfon d\'almenys una persona del vostre grup.',
       },
+    },
+
+    barcelona: {
+      title: 'Barcelona',
+      intro: 'Algunes coses que val la pena saber per ajudar-vos a planificar el temps a la ciutat.',
+      neighbourhoods: {
+        title: 'On allotjar-se',
+        items: [
+          { name: 'El Born / Sant Pere', desc: 'A poca distància a peu del local. Animat, ple de bars i restaurants. Es reserva de pressa.' },
+          { name: 'Barceloneta i el front marítim', desc: 'Just al costat del mar, a 10–15 minuts a peu del local. Ideal si voleu platja a prop.' },
+          { name: 'Eixample', desc: 'Cèntric i ben connectat en metro. Bona oferta d\'hotels a diferents preus.' },
+          { name: 'Gràcia', desc: 'Més tranquil, amb ambient de barri. Una mica més lluny, però fàcil en metro o taxi.' },
+        ],
+      },
+      transport: {
+        title: 'Com moure\'s',
+        items: [
+          'El local té molt bon transport públic — les línies de metro L4 (Barceloneta) i L3 (Drassanes) són a prop.',
+          'La T-Casual de 10 viatges és l\'opció més econòmica si feu servir el metro sovint.',
+          'Els taxis i Bolt/Cabify són fiables i assequibles per als desplaçaments de nit.',
+          'El centre és molt caminable — la majoria de zones al voltant del local son planes.',
+        ],
+      },
+      tips: {
+        title: 'Coses a tenir en compte',
+        items: [
+          'L\'abril a Barcelona és temporada alta. Reserveu allotjament el més aviat possible — els preus pugen molt a mesura que s\'acosta la data.',
+          'El temps a l\'abril és suau, però els vespres poden ser frescos. Porteu una jaqueta lleugera.',
+          'Les sabates còmodes son imprescindibles — tant per a la celebració com per passejar per la ciutat.',
+          'Barcelona és generalment molt segura, però vigileu les vostres pertinences a les zones turístiques concorregudes.',
+        ],
+      },
+    },
+
+    otherEvents: {
+      title:       'Abans i després',
+      placeholder: 'Estem planificant algunes coses al voltant del dia del casament — detalls properament.',
     },
 
     accommodation: {
@@ -611,6 +713,9 @@ const TRANSLATIONS = {
       faq:             'Domande',
       menu:            'Menu',
       close:           'Chiudi menu',
+      event:           'La festa',
+      barcelona:       'Barcellona',
+      otherEvents:     'Prima e dopo',
     },
 
     hero: {
@@ -658,6 +763,16 @@ const TRANSLATIONS = {
         end:      { label: 'Chiusura del locale',      desc: 'Ultimi drink al locale.' },
         after:    { label: 'Avanti a Barcellona',      desc: 'Nessun piano fisso — la notte continua dove vi porta.' },
       },
+    },
+
+    event: {
+      title:    'La festa',
+      intro:    'Tutto quello che dovete sapere sulla giornata.',
+      location: { title: 'Luogo' },
+      schedule: { title: 'Programma' },
+      dresscode:{ title: 'Abbigliamento e atmosfera' },
+      gifts:    { title: 'Regali' },
+      spotify:  { title: 'Playlist' },
     },
 
     rsvp: {
@@ -739,6 +854,7 @@ const TRANSLATIONS = {
         message: 'Non è stato possibile inviare la conferma. Riprovate o contattateci direttamente.',
       },
       devMode: 'Endpoint RSVP non configurato. I dati sono stati registrati nella console (modalità sviluppo).',
+      changeNote: 'Hai bisogno di modificare la tua conferma? Contatta direttamente Liam o Valentina.',
       validation: {
         required:     'Questo campo è obbligatorio.',
         emailInvalid: 'Inserite un indirizzo email valido.',
@@ -748,6 +864,43 @@ const TRANSLATIONS = {
         nameRequired: 'Inserite il nome di ogni persona.',
         noPhone:      'Per favore, indicate il numero di telefono di almeno una persona del vostro gruppo.',
       },
+    },
+
+    barcelona: {
+      title: 'Barcellona',
+      intro: 'Alcune cose utili da sapere per organizzare il vostro soggiorno in città.',
+      neighbourhoods: {
+        title: 'Dove alloggiare',
+        items: [
+          { name: 'El Born / Sant Pere', desc: 'A pochi passi dal locale. Vivace, pieno di bar e ristoranti. Si riempie in fretta.' },
+          { name: 'Barceloneta e il lungomare', desc: 'Vicino al mare, a 10–15 minuti a piedi dal locale. Ideale se volete la spiaggia.' },
+          { name: 'Eixample', desc: 'Centrale, ben collegato con la metro. Buona scelta di hotel a prezzi diversi.' },
+          { name: 'Gràcia', desc: 'Più tranquillo, con un\'atmosfera di quartiere. Un po\' più lontano, ma comodo in metro o taxi.' },
+        ],
+      },
+      transport: {
+        title: 'Come spostarsi',
+        items: [
+          'Il locale è ben servito dai trasporti pubblici — le linee metro L4 (Barceloneta) e L3 (Drassanes) sono nelle vicinanze.',
+          'La T-Casual da 10 viaggi è l\'opzione più economica se usate spesso la metro.',
+          'Taxi e Bolt/Cabify sono affidabili e convenienti per gli spostamenti serali.',
+          'Il centro è molto comodo da girare a piedi — la maggior parte delle zone intorno al locale è pianeggiante.',
+        ],
+      },
+      tips: {
+        title: 'Cose da sapere',
+        items: [
+          'Aprile a Barcellona è un periodo affollato. Prenotate l\'alloggio il prima possibile — i prezzi aumentano significativamente avvicinandosi alla data.',
+          'Il clima di aprile è mite, ma le serate possono essere fresche. Portate una giacca leggera.',
+          'Le scarpe comode sono indispensabili — sia per la festa che per esplorare la città.',
+          'Barcellona è generalmente molto sicura, ma fate attenzione agli effetti personali nelle zone turistiche affollate.',
+        ],
+      },
+    },
+
+    otherEvents: {
+      title:       'Prima e dopo',
+      placeholder: 'Stiamo organizzando alcune cose intorno al giorno del matrimonio — dettagli in arrivo.',
     },
 
     accommodation: {
@@ -896,6 +1049,9 @@ const TRANSLATIONS = {
       faq:             'Preguntas',
       menu:            'Menú',
       close:           'Cerrar menú',
+      event:           'La celebración',
+      barcelona:       'Barcelona',
+      otherEvents:     'Antes y después',
     },
 
     hero: {
@@ -943,6 +1099,16 @@ const TRANSLATIONS = {
         end:      { label: 'Cierre del local',         desc: 'Últimas copas en el local.' },
         after:    { label: 'A seguir por Barcelona',   desc: 'Sin plan fijo — la noche continúa donde os lleve.' },
       },
+    },
+
+    event: {
+      title:    'La celebración',
+      intro:    'Todo lo que necesitáis saber sobre el día.',
+      location: { title: 'Lugar' },
+      schedule: { title: 'Programa' },
+      dresscode:{ title: 'Vestimenta y ambiente' },
+      gifts:    { title: 'Regalos' },
+      spotify:  { title: 'Playlist' },
     },
 
     rsvp: {
@@ -1024,6 +1190,7 @@ const TRANSLATIONS = {
         message: 'No hemos podido enviar la confirmación. Intentadlo de nuevo o contactad con nosotros directamente.',
       },
       devMode: 'Endpoint de RSVP no configurado. Los datos se han registrado en la consola (modo desarrollo).',
+      changeNote: '¿Necesitas cambiar tu confirmación? Ponte en contacto directamente con Liam o Valentina.',
       validation: {
         required:     'Este campo es obligatorio.',
         emailInvalid: 'Introduce una dirección de correo electrónico válida.',
@@ -1033,6 +1200,43 @@ const TRANSLATIONS = {
         nameRequired: 'Introduce el nombre de cada persona.',
         noPhone:      'Por favor, proporcionad el teléfono de al menos una persona de vuestro grupo.',
       },
+    },
+
+    barcelona: {
+      title: 'Barcelona',
+      intro: 'Algunas cosas que vale la pena saber para ayudaros a planificar vuestra estancia en la ciudad.',
+      neighbourhoods: {
+        title: 'Dónde alojarse',
+        items: [
+          { name: 'El Born / Sant Pere', desc: 'A poca distancia a pie del local. Animado, lleno de bares y restaurantes. Se llena rápido.' },
+          { name: 'Barceloneta y el frente marítimo', desc: 'Junto al mar, a 10–15 minutos a pie del local. Ideal si queréis acceso a la playa.' },
+          { name: 'Eixample', desc: 'Céntrico y bien comunicado en metro. Buena oferta de hoteles a distintos precios.' },
+          { name: 'Gràcia', desc: 'Más tranquilo, con ambiente de barrio. Un poco más lejos, pero fácil en metro o taxi.' },
+        ],
+      },
+      transport: {
+        title: 'Cómo moverse',
+        items: [
+          'El local tiene muy buen transporte público — las líneas de metro L4 (Barceloneta) y L3 (Drassanes) están cerca.',
+          'La T-Casual de 10 viajes es la opción más económica si vais a usar el metro con frecuencia.',
+          'Los taxis y Bolt/Cabify son fiables y asequibles para los desplazamientos nocturnos.',
+          'El centro es muy cómodo para caminar — la mayoría de zonas alrededor del local son llanas.',
+        ],
+      },
+      tips: {
+        title: 'Cosas a tener en cuenta',
+        items: [
+          'Abril en Barcelona es temporada alta. Reservad alojamiento cuanto antes — los precios suben considerablemente a medida que se acerca la fecha.',
+          'El tiempo en abril es suave, pero las noches pueden ser frescas. Llevad una chaqueta ligera.',
+          'Los zapatos cómodos son imprescindibles — tanto para la celebración como para explorar la ciudad.',
+          'Barcelona es generalmente muy segura, pero vigilad vuestras pertenencias en las zonas turísticas concurridas.',
+        ],
+      },
+    },
+
+    otherEvents: {
+      title:       'Antes y después',
+      placeholder: 'Estamos planeando algunas cosas en torno al día de la boda — detalles próximamente.',
     },
 
     accommodation: {
@@ -1181,6 +1385,9 @@ const TRANSLATIONS = {
       faq:             'Questions',
       menu:            'Menu',
       close:           'Fermer le menu',
+      event:           'La fête',
+      barcelona:       'Barcelone',
+      otherEvents:     'Avant et après',
     },
 
     hero: {
@@ -1228,6 +1435,16 @@ const TRANSLATIONS = {
         end:      { label: 'Fermeture du lieu',         desc: 'Derniers verres sur place.' },
         after:    { label: 'On continue à Barcelone',  desc: 'Pas de plan fixe — la nuit continue où elle vous mène.' },
       },
+    },
+
+    event: {
+      title:    'La fête',
+      intro:    'Tout ce que vous devez savoir sur la journée.',
+      location: { title: 'Lieu' },
+      schedule: { title: 'Programme' },
+      dresscode:{ title: 'Tenue et ambiance' },
+      gifts:    { title: 'Cadeaux' },
+      spotify:  { title: 'Playlist' },
     },
 
     rsvp: {
@@ -1309,6 +1526,7 @@ const TRANSLATIONS = {
         message: 'Votre confirmation n\'a pas pu être envoyée. Réessayez ou contactez-nous directement.',
       },
       devMode: 'Endpoint RSVP non configuré. Les données ont été enregistrées dans la console (mode développement).',
+      changeNote: 'Besoin de modifier ta confirmation ? Contacte directement Liam ou Valentina.',
       validation: {
         required:     'Ce champ est obligatoire.',
         emailInvalid: 'Veuillez saisir une adresse e-mail valide.',
@@ -1318,6 +1536,43 @@ const TRANSLATIONS = {
         nameRequired: 'Indiquez le nom de chaque personne.',
         noPhone:      'Merci de fournir un numéro de téléphone pour au moins une personne de votre groupe.',
       },
+    },
+
+    barcelona: {
+      title: 'Barcelone',
+      intro: 'Quelques infos utiles pour vous aider à planifier votre séjour en ville.',
+      neighbourhoods: {
+        title: 'Où séjourner',
+        items: [
+          { name: 'El Born / Sant Pere', desc: 'À distance de marche du lieu. Animé, plein de bars et de restaurants. Se réserve vite.' },
+          { name: 'Barceloneta et le front de mer', desc: 'Juste au bord de la mer, à 10–15 min à pied du lieu. Idéal si vous voulez la plage.' },
+          { name: 'Eixample', desc: 'Central, bien desservi par le métro. Bonne gamme d\'hôtels à différents prix.' },
+          { name: 'Gràcia', desc: 'Plus calme, ambiance de quartier. Un peu plus loin, mais facile en métro ou taxi.' },
+        ],
+      },
+      transport: {
+        title: 'Se déplacer',
+        items: [
+          'Le lieu est bien desservi par les transports en commun — les lignes de métro L4 (Barceloneta) et L3 (Drassanes) sont à proximité.',
+          'La T-Casual 10 voyages est l\'option la plus économique si vous utilisez régulièrement le métro.',
+          'Les taxis et Bolt/Cabify sont fiables et abordables pour les trajets en soirée.',
+          'Le centre-ville se parcourt très bien à pied — la plupart des zones autour du lieu sont plates.',
+        ],
+      },
+      tips: {
+        title: 'Bon à savoir',
+        items: [
+          'Avril à Barcelone est très fréquenté. Réservez votre hébergement le plus tôt possible — les prix augmentent sensiblement à l\'approche de la date.',
+          'Le temps en avril est doux, mais les soirées peuvent être fraîches. Prévoyez une veste légère.',
+          'Des chaussures confortables sont indispensables — aussi bien pour la fête que pour se balader en ville.',
+          'Barcelone est généralement très sûre, mais restez vigilants avec vos affaires dans les zones touristiques animées.',
+        ],
+      },
+    },
+
+    otherEvents: {
+      title:       'Avant et après',
+      placeholder: 'On prépare quelques choses autour du jour du mariage — détails à venir.',
     },
 
     accommodation: {

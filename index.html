@@ -70,10 +70,10 @@
       <!-- Desktop nav -->
       <nav class="site-nav" aria-label="Main navigation">
         <ul class="site-nav__list" role="list" id="nav-list">
-          <li><a href="#about"           class="site-nav__link" data-i18n="nav.about">The celebration</a></li>
-          <li><a href="#venue"           class="site-nav__link" data-i18n="nav.venue">Venue &amp; date</a></li>
-          <li><a href="#schedule"        class="site-nav__link" data-i18n="nav.schedule">Schedule</a></li>
-          <li><a href="#rsvp"            class="site-nav__link site-nav__link--cta" data-i18n="nav.rsvp">RSVP</a></li>
+          <li><a href="#event"     class="site-nav__link" data-i18n="nav.event">The celebration</a></li>
+          <li><a href="#rsvp"      class="site-nav__link site-nav__link--cta" data-i18n="nav.rsvp">RSVP</a></li>
+          <li><a href="#barcelona" class="site-nav__link" data-i18n="nav.barcelona">Barcelona</a></li>
+          <li><a href="#whatsapp"  class="site-nav__link" data-i18n="nav.whatsapp">WhatsApp</a></li>
         </ul>
       </nav>
 
@@ -97,16 +97,11 @@
     <!-- Mobile nav -->
     <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
       <ul class="mobile-nav__list" role="list">
-        <li><a href="#about"           class="mobile-nav__link" data-i18n="nav.about">The celebration</a></li>
-        <li><a href="#venue"           class="mobile-nav__link" data-i18n="nav.venue">Venue &amp; date</a></li>
-        <li><a href="#schedule"        class="mobile-nav__link" data-i18n="nav.schedule">Schedule</a></li>
-        <li><a href="#rsvp"            class="mobile-nav__link" data-i18n="nav.rsvp">RSVP</a></li>
-        <li><a href="#accommodation"   class="mobile-nav__link" data-i18n="nav.accommodation">Accommodation</a></li>
-        <li><a href="#recommendations" class="mobile-nav__link" data-i18n="nav.recommendations">Tips</a></li>
-        <li><a href="#spotify"         class="mobile-nav__link" data-i18n="nav.spotify">Playlist</a></li>
-        <li><a href="#whatsapp"        class="mobile-nav__link" data-i18n="nav.whatsapp">WhatsApp</a></li>
-        <li><a href="#gifts"           class="mobile-nav__link" data-i18n="nav.gifts">Gifts</a></li>
-        <li><a href="#faq"             class="mobile-nav__link" data-i18n="nav.faq">FAQ</a></li>
+        <li><a href="#event"        class="mobile-nav__link" data-i18n="nav.event">The celebration</a></li>
+        <li><a href="#rsvp"         class="mobile-nav__link" data-i18n="nav.rsvp">RSVP</a></li>
+        <li><a href="#barcelona"    class="mobile-nav__link" data-i18n="nav.barcelona">Barcelona</a></li>
+        <li><a href="#other-events" class="mobile-nav__link" data-i18n="nav.otherEvents">Before &amp; after</a></li>
+        <li><a href="#whatsapp"     class="mobile-nav__link" data-i18n="nav.whatsapp">WhatsApp</a></li>
       </ul>
       <!-- Language buttons inside mobile menu -->
       <div class="mobile-nav__langs" role="group" aria-label="Language switcher">
@@ -134,78 +129,97 @@
           <p class="hero__welcome" data-i18n="hero.welcome">Come celebrate with us.</p>
           <div class="hero__actions">
             <a href="#rsvp" class="btn btn--primary" data-i18n="hero.rsvpBtn">RSVP</a>
-            <a href="#venue" class="btn btn--secondary" data-i18n="hero.mapBtn">Find the venue</a>
+            <a href="#event" class="btn btn--secondary" data-i18n="hero.mapBtn">Find the venue</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ── ABOUT ────────────────────────────────────────────── -->
-    <section id="about" class="section section--alt" aria-labelledby="about-title">
+    <!-- ── EVENT ──────────────────────────────────────────── -->
+    <section id="event" class="section section--alt" aria-labelledby="event-title">
       <div class="container">
-        <h2 class="section-title" id="about-title" data-i18n="about.title">What kind of celebration is this?</h2>
-        <p class="section-intro" data-i18n="about.intro"></p>
+        <h2 class="section-title" id="event-title" data-i18n="event.title">The celebration</h2>
+        <p class="section-intro" data-i18n="event.intro"></p>
 
-        <!-- Highlight card -->
-        <div class="highlight-card" role="note">
-          <p class="highlight-card__text" data-i18n="about.card"></p>
-        </div>
+        <div class="event-subsections">
 
-        <!-- Detail items -->
-        <ul class="about-items" role="list" id="about-items" aria-label="Celebration format details"></ul>
-      </div>
-    </section>
+          <!-- Location -->
+          <div class="event-subsection" id="event-location">
+            <h3 class="subsection-title" data-i18n="event.location.title">Location</h3>
+            <div class="venue-grid">
+              <!-- Info card -->
+              <div class="card venue-card">
+                <dl class="venue-details">
+                  <div class="venue-detail-row">
+                    <dt data-i18n="venue.dateLabel">Date</dt>
+                    <dd id="venue-date">24 April 2027</dd>
+                  </div>
+                  <div class="venue-detail-row">
+                    <dt data-i18n="venue.timeLabel">Time</dt>
+                    <dd id="venue-time">15:00 – 22:00</dd>
+                  </div>
+                  <div class="venue-detail-row">
+                    <dt data-i18n="venue.addressLabel">Venue</dt>
+                    <dd>Estació de França<br />Barcelona</dd>
+                  </div>
+                </dl>
+                <p class="venue-time-note" data-i18n="venue.timeNote"></p>
+                <a id="venue-map-btn" href="#" class="btn btn--primary venue-map-btn" target="_blank" rel="noopener noreferrer" data-i18n="venue.mapBtn">Open in Google Maps</a>
 
-    <!-- ── VENUE & DATE ─────────────────────────────────────── -->
-    <section id="venue" class="section" aria-labelledby="venue-title">
-      <div class="container">
-        <h2 class="section-title" id="venue-title" data-i18n="venue.title">Venue &amp; date</h2>
-
-        <div class="venue-grid">
-          <!-- Info card -->
-          <div class="card venue-card">
-            <dl class="venue-details">
-              <div class="venue-detail-row">
-                <dt data-i18n="venue.dateLabel">Date</dt>
-                <dd id="venue-date">24 April 2027</dd>
+                <div class="venue-transport">
+                  <h3 class="venue-transport__title" data-i18n="venue.transportTitle">Getting there</h3>
+                  <p class="venue-transport__note" data-i18n="venue.transportNote"></p>
+                </div>
               </div>
-              <div class="venue-detail-row">
-                <dt data-i18n="venue.timeLabel">Time</dt>
-                <dd id="venue-time">15:00 – 22:00</dd>
-              </div>
-              <div class="venue-detail-row">
-                <dt data-i18n="venue.addressLabel">Venue</dt>
-                <dd>Estació de França<br />Barcelona</dd>
-              </div>
-            </dl>
-            <p class="venue-time-note" data-i18n="venue.timeNote"></p>
-            <a id="venue-map-btn" href="#" class="btn btn--primary venue-map-btn" target="_blank" rel="noopener noreferrer" data-i18n="venue.mapBtn">Open in Google Maps</a>
 
-            <div class="venue-transport">
-              <h3 class="venue-transport__title" data-i18n="venue.transportTitle">Getting there</h3>
-              <p class="venue-transport__note" data-i18n="venue.transportNote"></p>
+              <!-- Image placeholder -->
+              <div class="venue-image-wrap">
+                <div class="venue-image-placeholder" role="img" aria-label="Estació de França, Barcelona">
+                  <span class="venue-image-placeholder__text">📍</span>
+                  <p>Estació de França<br />Barcelona</p>
+                </div>
+                <!-- Replace the placeholder above with an <img> when a photo is available:
+                     <img src="assets/images/venue.jpg" alt="Estació de França, Barcelona" class="venue-image" loading="lazy" /> -->
+              </div>
             </div>
           </div>
 
-          <!-- Image placeholder -->
-          <div class="venue-image-wrap">
-            <div class="venue-image-placeholder" role="img" aria-label="Estació de França, Barcelona">
-              <span class="venue-image-placeholder__text">📍</span>
-              <p>Estació de França<br />Barcelona</p>
-            </div>
-            <!-- Replace the placeholder above with an <img> when a photo is available:
-                 <img src="assets/images/venue.jpg" alt="Estació de França, Barcelona" class="venue-image" loading="lazy" /> -->
+          <!-- Schedule -->
+          <div class="event-subsection" id="event-schedule">
+            <h3 class="subsection-title" data-i18n="event.schedule.title">Schedule</h3>
+            <p class="section-intro section-intro--small" data-i18n="schedule.provisional"></p>
+            <ol class="timeline" id="schedule-list" aria-label="Event schedule"></ol>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- ── SCHEDULE ─────────────────────────────────────────── -->
-    <section id="schedule" class="section section--alt" aria-labelledby="schedule-title">
-      <div class="container">
-        <h2 class="section-title" id="schedule-title" data-i18n="schedule.title">Schedule</h2>
-        <p class="section-intro section-intro--small" data-i18n="schedule.provisional"></p>
-        <ol class="timeline" id="schedule-list" aria-label="Event schedule"></ol>
+          <!-- Dress code & vibe -->
+          <div class="event-subsection" id="event-dresscode">
+            <h3 class="subsection-title" data-i18n="event.dresscode.title">Dress code &amp; vibe</h3>
+            <div class="highlight-card" role="note">
+              <p class="highlight-card__text" data-i18n="about.card"></p>
+            </div>
+            <ul class="about-items" role="list" id="about-items" aria-label="Celebration format details"></ul>
+          </div>
+
+          <!-- Gifts -->
+          <div class="event-subsection" id="event-gifts">
+            <h3 class="subsection-title" data-i18n="event.gifts.title">Gifts</h3>
+            <p class="gifts-message" data-i18n="gifts.message"></p>
+          </div>
+
+          <!-- Spotify -->
+          <div class="event-subsection" id="event-spotify">
+            <h3 class="subsection-title" data-i18n="event.spotify.title">Playlist</h3>
+            <div class="spotify-card card">
+              <div class="spotify-icon" aria-hidden="true">🎵</div>
+              <p data-i18n="spotify.intro"></p>
+              <div id="spotify-action">
+                <a id="spotify-btn" href="#" class="btn btn--spotify" target="_blank" rel="noopener noreferrer" data-i18n="spotify.btn">Open Spotify playlist</a>
+              </div>
+              <p id="spotify-not-configured" class="not-configured-note" data-i18n="spotify.notConfigured" hidden></p>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
@@ -295,46 +309,42 @@
           <p data-i18n="rsvp.error.message"></p>
           <button type="button" class="btn btn--outline btn--small" id="rsvp-retry-btn">Try again</button>
         </div>
+
+        <!-- Change RSVP note -->
+        <p class="rsvp-change-note" data-i18n="rsvp.changeNote"></p>
       </div>
     </section>
 
-    <!-- ── ACCOMMODATION ────────────────────────────────────── -->
-    <section id="accommodation" class="section section--alt" aria-labelledby="accommodation-title">
+    <!-- ── BARCELONA ───────────────────────────────────────── -->
+    <section id="barcelona" class="section section--alt" aria-labelledby="barcelona-title">
       <div class="container">
-        <h2 class="section-title" id="accommodation-title" data-i18n="accommodation.title">Book accommodation early</h2>
-        <div class="accommodation-intro">
-          <p data-i18n="accommodation.intro"></p>
-          <p data-i18n="accommodation.advice"></p>
-        </div>
-        <div id="accommodation-list" class="accommodation-list" aria-label="Accommodation recommendations"></div>
+        <h2 class="section-title" id="barcelona-title" data-i18n="barcelona.title"></h2>
+        <p class="section-intro" data-i18n="barcelona.intro"></p>
+
+        <!-- Neighbourhoods -->
+        <h3 class="subsection-title" data-i18n="barcelona.neighbourhoods.title"></h3>
+        <div id="barcelona-neighbourhoods" class="neighbourhood-list"></div>
+
+        <!-- Getting around -->
+        <h3 class="subsection-title" data-i18n="barcelona.transport.title"></h3>
+        <ul id="barcelona-transport" class="tips-list"></ul>
+
+        <!-- Tips -->
+        <h3 class="subsection-title" data-i18n="barcelona.tips.title"></h3>
+        <ul id="barcelona-tips" class="tips-list"></ul>
       </div>
     </section>
 
-    <!-- ── RECOMMENDATIONS ──────────────────────────────────── -->
-    <section id="recommendations" class="section" aria-labelledby="recommendations-title">
-      <div class="container">
-        <h2 class="section-title" id="recommendations-title" data-i18n="recommendations.title">Good to know</h2>
-        <ul class="recommendations-list" id="recommendations-list" role="list" aria-label="Recommendations"></ul>
-      </div>
-    </section>
-
-    <!-- ── SPOTIFY ──────────────────────────────────────────── -->
-    <section id="spotify" class="section section--alt" aria-labelledby="spotify-title">
+    <!-- ── OTHER EVENTS ────────────────────────────────────── -->
+    <section id="other-events" class="section" aria-labelledby="other-events-title">
       <div class="container container--narrow">
-        <div class="spotify-card card">
-          <div class="spotify-icon" aria-hidden="true">🎵</div>
-          <h2 class="section-title section-title--card" id="spotify-title" data-i18n="spotify.title">Add a song to the playlist</h2>
-          <p data-i18n="spotify.intro"></p>
-          <div id="spotify-action">
-            <a id="spotify-btn" href="#" class="btn btn--spotify" target="_blank" rel="noopener noreferrer" data-i18n="spotify.btn">Open Spotify playlist</a>
-          </div>
-          <p id="spotify-not-configured" class="not-configured-note" data-i18n="spotify.notConfigured" hidden></p>
-        </div>
+        <h2 class="section-title" id="other-events-title" data-i18n="otherEvents.title"></h2>
+        <p class="section-intro other-events-placeholder" data-i18n="otherEvents.placeholder"></p>
       </div>
     </section>
 
     <!-- ── WHATSAPP ─────────────────────────────────────────── -->
-    <section id="whatsapp" class="section" aria-labelledby="whatsapp-title">
+    <section id="whatsapp" class="section section--alt" aria-labelledby="whatsapp-title">
       <div class="container container--narrow">
         <div class="whatsapp-card card">
           <div class="whatsapp-icon" aria-hidden="true">💬</div>
@@ -346,33 +356,6 @@
           </div>
           <p id="whatsapp-not-configured" class="not-configured-note" data-i18n="whatsapp.notConfigured" hidden></p>
         </div>
-      </div>
-    </section>
-
-    <!-- ── GIFTS ────────────────────────────────────────────── -->
-    <section id="gifts" class="section section--alt" aria-labelledby="gifts-title">
-      <div class="container container--narrow">
-        <div class="card gifts-card">
-          <div class="gifts-icon" aria-hidden="true">🎁</div>
-          <h2 class="section-title section-title--card" id="gifts-title" data-i18n="gifts.title">Gifts</h2>
-          <p class="gifts-message" data-i18n="gifts.message"></p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── ADDITIONAL EVENTS ────────────────────────────────── -->
-    <section id="additional-events" class="section" aria-labelledby="additional-events-title">
-      <div class="container">
-        <h2 class="section-title" id="additional-events-title" data-i18n="additionalEvents.title">Before &amp; after</h2>
-        <div id="additional-events-list" class="additional-events-list" aria-label="Additional events"></div>
-      </div>
-    </section>
-
-    <!-- ── FAQ ──────────────────────────────────────────────── -->
-    <section id="faq" class="section section--alt" aria-labelledby="faq-title">
-      <div class="container container--narrow">
-        <h2 class="section-title" id="faq-title" data-i18n="faq.title">Questions</h2>
-        <dl class="faq-list" id="faq-list" aria-label="Frequently asked questions"></dl>
       </div>
     </section>
 
@@ -403,7 +386,7 @@
     <div class="confirm-modal__inner">
       <h2 class="confirm-modal__title" id="confirm-modal-title" data-i18n="rsvp.confirmTitle">Check your RSVP</h2>
       <p data-i18n="rsvp.confirmText"></p>
-      <div id="confirm-summary" class="confirm-summary"></div>
+      <div id="confirm-summary"></div>
       <div class="confirm-modal__actions">
         <button type="button" id="confirm-back-btn" class="btn btn--outline" data-i18n="rsvp.backBtn">Go back and edit</button>
         <button type="button" id="confirm-send-btn" class="btn btn--primary" data-i18n="rsvp.confirmBtn">Confirm and send</button>
