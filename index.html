@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── Primary meta ──────────────────────────────────────── -->
+  <title>Liam & Valentina — 24 April 2027, Barcelona</title>
+  <meta name="description"   content="Join Liam and Valentina for their wedding celebration on 24 April 2027 at Estació de França, Barcelona." />
+  <meta name="robots"        content="noindex, nofollow" />
+  <meta name="theme-color"   content="#c8916c" />
+
+  <!-- ── Open Graph ────────────────────────────────────────── -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Liam & Valentina — 24 April 2027, Barcelona" />
+  <meta property="og:description" content="Join us for our wedding celebration at Estació de França, Barcelona." />
+  <meta property="og:image"       content="" /><!-- filled by config -->
+
+  <!-- ── Canonical ─────────────────────────────────────────── -->
+  <link rel="canonical" href="" /><!-- filled by config -->
+
+  <!-- ── Favicon placeholders ──────────────────────────────── -->
+  <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon" />
+
+  <!-- ── Google Fonts ──────────────────────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"  href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────── -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- ── Config & translations (must load before script.js) ── -->
+  <script src="config.js"></script>
+  <script src="translations.js"></script>
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════════════════════════
+       LANGUAGE SELECTION MODAL
+       Shown on first visit; remembered via localStorage.
+  ════════════════════════════════════════════════════════ -->
+  <div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" hidden>
+    <div class="lang-modal__inner">
+      <h1 id="lang-modal-title" class="lang-modal__title" data-i18n="langSelect.title">Choose your language</h1>
+      <p class="lang-modal__subtitle" data-i18n="langSelect.subtitle">You can change this at any time from the menu.</p>
+      <ul class="lang-modal__list" role="list">
+        <li><button class="lang-btn lang-btn--full" data-lang="en" aria-label="English">English</button></li>
+        <li><button class="lang-btn lang-btn--full" data-lang="ca" aria-label="Català">Català</button></li>
+        <li><button class="lang-btn lang-btn--full" data-lang="it" aria-label="Italiano">Italiano</button></li>
+        <li><button class="lang-btn lang-btn--full" data-lang="es" aria-label="Español">Español</button></li>
+        <li><button class="lang-btn lang-btn--full" data-lang="fr" aria-label="Français">Français</button></li>
+      </ul>
+    </div>
+  </div>
+  <div id="lang-modal-backdrop" class="lang-modal__backdrop" hidden aria-hidden="true"></div>
+
+  <!-- ════════════════════════════════════════════════════════
+       HEADER & NAVIGATION
+  ════════════════════════════════════════════════════════ -->
+  <header class="site-header" role="banner">
+    <div class="container site-header__inner">
+
+      <!-- Couple name / home link -->
+      <a href="#hero" class="site-header__brand" aria-label="Liam &amp; Valentina — back to top">
+        Liam <span class="brand-amp">&amp;</span> Valentina
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul class="site-nav__list" role="list" id="nav-list">
+          <li><a href="#about"           class="site-nav__link" data-i18n="nav.about">The celebration</a></li>
+          <li><a href="#venue"           class="site-nav__link" data-i18n="nav.venue">Venue &amp; date</a></li>
+          <li><a href="#schedule"        class="site-nav__link" data-i18n="nav.schedule">Schedule</a></li>
+          <li><a href="#rsvp"            class="site-nav__link site-nav__link--cta" data-i18n="nav.rsvp">RSVP</a></li>
+        </ul>
+      </nav>
+
+      <!-- Language switcher -->
+      <div class="lang-switcher" role="group" aria-label="Language switcher">
+        <button class="lang-switch-btn" data-lang="en"  aria-label="Switch to English">EN</button>
+        <button class="lang-switch-btn" data-lang="ca"  aria-label="Switch to Català">CA</button>
+        <button class="lang-switch-btn" data-lang="it"  aria-label="Switch to Italiano">IT</button>
+        <button class="lang-switch-btn" data-lang="es"  aria-label="Switch to Español">ES</button>
+        <button class="lang-switch-btn" data-lang="fr"  aria-label="Switch to Français">FR</button>
+      </div>
+
+      <!-- Mobile menu toggle -->
+      <button class="nav-toggle" id="nav-toggle" aria-controls="mobile-nav" aria-expanded="false" aria-label="Open menu">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+    </div>
+
+    <!-- Mobile nav -->
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <ul class="mobile-nav__list" role="list">
+        <li><a href="#about"           class="mobile-nav__link" data-i18n="nav.about">The celebration</a></li>
+        <li><a href="#venue"           class="mobile-nav__link" data-i18n="nav.venue">Venue &amp; date</a></li>
+        <li><a href="#schedule"        class="mobile-nav__link" data-i18n="nav.schedule">Schedule</a></li>
+        <li><a href="#rsvp"            class="mobile-nav__link" data-i18n="nav.rsvp">RSVP</a></li>
+        <li><a href="#accommodation"   class="mobile-nav__link" data-i18n="nav.accommodation">Accommodation</a></li>
+        <li><a href="#recommendations" class="mobile-nav__link" data-i18n="nav.recommendations">Tips</a></li>
+        <li><a href="#spotify"         class="mobile-nav__link" data-i18n="nav.spotify">Playlist</a></li>
+        <li><a href="#whatsapp"        class="mobile-nav__link" data-i18n="nav.whatsapp">WhatsApp</a></li>
+        <li><a href="#gifts"           class="mobile-nav__link" data-i18n="nav.gifts">Gifts</a></li>
+        <li><a href="#faq"             class="mobile-nav__link" data-i18n="nav.faq">FAQ</a></li>
+      </ul>
+      <!-- Language buttons inside mobile menu -->
+      <div class="mobile-nav__langs" role="group" aria-label="Language switcher">
+        <button class="lang-switch-btn" data-lang="en"  aria-label="Switch to English">EN</button>
+        <button class="lang-switch-btn" data-lang="ca"  aria-label="Switch to Català">CA</button>
+        <button class="lang-switch-btn" data-lang="it"  aria-label="Switch to Italiano">IT</button>
+        <button class="lang-switch-btn" data-lang="es"  aria-label="Switch to Español">ES</button>
+        <button class="lang-switch-btn" data-lang="fr"  aria-label="Switch to Français">FR</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ════════════════════════════════════════════════════════
+       MAIN CONTENT
+  ════════════════════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- ── HERO ────────────────────────────────────────────── -->
+    <section id="hero" class="section section--hero" aria-label="Hero">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="hero__names">Liam <span class="hero-amp">&amp;</span> Valentina</p>
+          <p class="hero__date" id="hero-date">24 April 2027</p>
+          <p class="hero__venue">Estació de França, Barcelona</p>
+          <p class="hero__welcome" data-i18n="hero.welcome">Come celebrate with us.</p>
+          <div class="hero__actions">
+            <a href="#rsvp" class="btn btn--primary" data-i18n="hero.rsvpBtn">RSVP</a>
+            <a href="#venue" class="btn btn--secondary" data-i18n="hero.mapBtn">Find the venue</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ABOUT ────────────────────────────────────────────── -->
+    <section id="about" class="section section--alt" aria-labelledby="about-title">
+      <div class="container">
+        <h2 class="section-title" id="about-title" data-i18n="about.title">What kind of celebration is this?</h2>
+        <p class="section-intro" data-i18n="about.intro"></p>
+
+        <!-- Highlight card -->
+        <div class="highlight-card" role="note">
+          <p class="highlight-card__text" data-i18n="about.card"></p>
+        </div>
+
+        <!-- Detail items -->
+        <ul class="about-items" role="list" id="about-items" aria-label="Celebration format details"></ul>
+      </div>
+    </section>
+
+    <!-- ── VENUE & DATE ─────────────────────────────────────── -->
+    <section id="venue" class="section" aria-labelledby="venue-title">
+      <div class="container">
+        <h2 class="section-title" id="venue-title" data-i18n="venue.title">Venue &amp; date</h2>
+
+        <div class="venue-grid">
+          <!-- Info card -->
+          <div class="card venue-card">
+            <dl class="venue-details">
+              <div class="venue-detail-row">
+                <dt data-i18n="venue.dateLabel">Date</dt>
+                <dd id="venue-date">24 April 2027</dd>
+              </div>
+              <div class="venue-detail-row">
+                <dt data-i18n="venue.timeLabel">Time</dt>
+                <dd id="venue-time">15:00 – 22:00</dd>
+              </div>
+              <div class="venue-detail-row">
+                <dt data-i18n="venue.addressLabel">Venue</dt>
+                <dd>Estació de França<br />Barcelona</dd>
+              </div>
+            </dl>
+            <p class="venue-time-note" data-i18n="venue.timeNote"></p>
+            <a id="venue-map-btn" href="#" class="btn btn--primary venue-map-btn" target="_blank" rel="noopener noreferrer" data-i18n="venue.mapBtn">Open in Google Maps</a>
+
+            <div class="venue-transport">
+              <h3 class="venue-transport__title" data-i18n="venue.transportTitle">Getting there</h3>
+              <p class="venue-transport__note" data-i18n="venue.transportNote"></p>
+            </div>
+          </div>
+
+          <!-- Image placeholder -->
+          <div class="venue-image-wrap">
+            <div class="venue-image-placeholder" role="img" aria-label="Estació de França, Barcelona">
+              <span class="venue-image-placeholder__text">📍</span>
+              <p>Estació de França<br />Barcelona</p>
+            </div>
+            <!-- Replace the placeholder above with an <img> when a photo is available:
+                 <img src="assets/images/venue.jpg" alt="Estació de França, Barcelona" class="venue-image" loading="lazy" /> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SCHEDULE ─────────────────────────────────────────── -->
+    <section id="schedule" class="section section--alt" aria-labelledby="schedule-title">
+      <div class="container">
+        <h2 class="section-title" id="schedule-title" data-i18n="schedule.title">Schedule</h2>
+        <p class="section-intro section-intro--small" data-i18n="schedule.provisional"></p>
+        <ol class="timeline" id="schedule-list" aria-label="Event schedule"></ol>
+      </div>
+    </section>
+
+    <!-- ── RSVP ─────────────────────────────────────────────── -->
+    <section id="rsvp" class="section" aria-labelledby="rsvp-title">
+      <div class="container container--narrow">
+        <h2 class="section-title" id="rsvp-title" data-i18n="rsvp.title">RSVP</h2>
+        <p class="section-intro" data-i18n="rsvp.intro"></p>
+        <p class="rsvp-deadline" id="rsvp-deadline"></p>
+
+        <!-- Dev-mode notice -->
+        <div id="rsvp-dev-notice" class="notice notice--info" hidden role="alert" aria-live="polite">
+          <span data-i18n="rsvp.devMode"></span>
+        </div>
+
+        <!-- RSVP Form -->
+        <form id="rsvp-form" class="rsvp-form" novalidate aria-label="RSVP form">
+
+          <!-- Honeypot (hidden from real users) -->
+          <div class="hp-field" aria-hidden="true">
+            <label for="hp-name">Leave this blank</label>
+            <input type="text" id="hp-name" name="hp_name" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <!-- ── Confirm attendance ────────────────────── -->
+          <label class="rsvp-confirm-toggle" for="confirm-attending">
+            <input type="checkbox" id="confirm-attending" name="confirm_attending" />
+            <span class="rsvp-confirm-toggle__box" aria-hidden="true"></span>
+            <span class="rsvp-confirm-toggle__text" data-i18n="rsvp.confirmAttending">Yes, I'll be there!</span>
+          </label>
+
+          <!-- ── Form details (shown when confirmed) ───── -->
+          <div id="rsvp-form-details" hidden>
+
+          <!-- ── Guest list ─────────────────────────────── -->
+          <fieldset class="form-fieldset" id="fieldset-guests">
+            <legend class="form-legend" data-i18n="rsvp.guests.legend">Your group</legend>
+            <p class="fieldset-intro" data-i18n="rsvp.guests.intro"></p>
+            <p class="field-error" id="err-guests" role="alert" aria-live="polite" hidden></p>
+            <p class="field-error" id="err-phone-group" role="alert" aria-live="polite" hidden></p>
+
+            <div id="guest-list" class="guest-list" aria-label="Guest list"></div>
+
+            <button type="button" id="add-guest-btn" class="btn btn--outline btn--small" data-i18n="rsvp.guests.addBtn">+ Add person</button>
+
+            <div class="guest-totals" id="guest-totals" aria-live="polite" aria-label="Guest totals">
+              <div class="guest-total-row">
+                <span data-i18n="rsvp.totals.listed"></span>
+                <strong id="total-listed">0</strong>
+              </div>
+              <div class="guest-total-row">
+                <span data-i18n="rsvp.totals.children"></span>
+                <strong id="total-children">0</strong>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- ── Optional message ───────────────────────── -->
+          <div class="form-field">
+            <label class="form-label" for="extra-message" data-i18n="rsvp.extra.message">Message (optional)</label>
+            <textarea class="form-textarea" id="extra-message" name="extra_message" rows="3" data-i18n-placeholder="rsvp.extra.messagePh"></textarea>
+          </div>
+
+          <!-- ── Consent ────────────────────────────────── -->
+          <div class="form-field form-field--consent">
+            <label class="checkbox-label" for="consent">
+              <input type="checkbox" id="consent" name="consent" required aria-required="true" aria-describedby="err-consent" />
+              <span data-i18n="rsvp.consent.label"></span>
+            </label>
+            <p class="field-error" id="err-consent" role="alert" aria-live="polite" hidden></p>
+          </div>
+
+          <p class="form-privacy" data-i18n="rsvp.privacy"></p>
+
+          <button type="submit" class="btn btn--primary btn--full" id="rsvp-submit-btn" data-i18n="rsvp.submitBtn">Review &amp; send</button>
+
+          </div><!-- /#rsvp-form-details -->
+        </form>
+
+        <!-- Success / Error messages -->
+        <div id="rsvp-success" class="rsvp-feedback rsvp-feedback--success" hidden role="alert" aria-live="polite">
+          <h3 data-i18n="rsvp.success.title"></h3>
+          <p data-i18n="rsvp.success.message"></p>
+        </div>
+        <div id="rsvp-error" class="rsvp-feedback rsvp-feedback--error" hidden role="alert" aria-live="polite">
+          <h3 data-i18n="rsvp.error.title"></h3>
+          <p data-i18n="rsvp.error.message"></p>
+          <button type="button" class="btn btn--outline btn--small" id="rsvp-retry-btn">Try again</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ACCOMMODATION ────────────────────────────────────── -->
+    <section id="accommodation" class="section section--alt" aria-labelledby="accommodation-title">
+      <div class="container">
+        <h2 class="section-title" id="accommodation-title" data-i18n="accommodation.title">Book accommodation early</h2>
+        <div class="accommodation-intro">
+          <p data-i18n="accommodation.intro"></p>
+          <p data-i18n="accommodation.advice"></p>
+        </div>
+        <div id="accommodation-list" class="accommodation-list" aria-label="Accommodation recommendations"></div>
+      </div>
+    </section>
+
+    <!-- ── RECOMMENDATIONS ──────────────────────────────────── -->
+    <section id="recommendations" class="section" aria-labelledby="recommendations-title">
+      <div class="container">
+        <h2 class="section-title" id="recommendations-title" data-i18n="recommendations.title">Good to know</h2>
+        <ul class="recommendations-list" id="recommendations-list" role="list" aria-label="Recommendations"></ul>
+      </div>
+    </section>
+
+    <!-- ── SPOTIFY ──────────────────────────────────────────── -->
+    <section id="spotify" class="section section--alt" aria-labelledby="spotify-title">
+      <div class="container container--narrow">
+        <div class="spotify-card card">
+          <div class="spotify-icon" aria-hidden="true">🎵</div>
+          <h2 class="section-title section-title--card" id="spotify-title" data-i18n="spotify.title">Add a song to the playlist</h2>
+          <p data-i18n="spotify.intro"></p>
+          <div id="spotify-action">
+            <a id="spotify-btn" href="#" class="btn btn--spotify" target="_blank" rel="noopener noreferrer" data-i18n="spotify.btn">Open Spotify playlist</a>
+          </div>
+          <p id="spotify-not-configured" class="not-configured-note" data-i18n="spotify.notConfigured" hidden></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── WHATSAPP ─────────────────────────────────────────── -->
+    <section id="whatsapp" class="section" aria-labelledby="whatsapp-title">
+      <div class="container container--narrow">
+        <div class="whatsapp-card card">
+          <div class="whatsapp-icon" aria-hidden="true">💬</div>
+          <h2 class="section-title section-title--card" id="whatsapp-title" data-i18n="whatsapp.title">Wedding WhatsApp group</h2>
+          <p data-i18n="whatsapp.intro"></p>
+          <p class="whatsapp-detail" data-i18n="whatsapp.detail"></p>
+          <div id="whatsapp-action">
+            <a id="whatsapp-btn" href="#" class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer" data-i18n="whatsapp.btn">Join the WhatsApp group</a>
+          </div>
+          <p id="whatsapp-not-configured" class="not-configured-note" data-i18n="whatsapp.notConfigured" hidden></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── GIFTS ────────────────────────────────────────────── -->
+    <section id="gifts" class="section section--alt" aria-labelledby="gifts-title">
+      <div class="container container--narrow">
+        <div class="card gifts-card">
+          <div class="gifts-icon" aria-hidden="true">🎁</div>
+          <h2 class="section-title section-title--card" id="gifts-title" data-i18n="gifts.title">Gifts</h2>
+          <p class="gifts-message" data-i18n="gifts.message"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ADDITIONAL EVENTS ────────────────────────────────── -->
+    <section id="additional-events" class="section" aria-labelledby="additional-events-title">
+      <div class="container">
+        <h2 class="section-title" id="additional-events-title" data-i18n="additionalEvents.title">Before &amp; after</h2>
+        <div id="additional-events-list" class="additional-events-list" aria-label="Additional events"></div>
+      </div>
+    </section>
+
+    <!-- ── FAQ ──────────────────────────────────────────────── -->
+    <section id="faq" class="section section--alt" aria-labelledby="faq-title">
+      <div class="container container--narrow">
+        <h2 class="section-title" id="faq-title" data-i18n="faq.title">Questions</h2>
+        <dl class="faq-list" id="faq-list" aria-label="Frequently asked questions"></dl>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ════════════════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container site-footer__inner">
+      <p class="footer-couple">Liam <span>&amp;</span> Valentina</p>
+      <p class="footer-closing" data-i18n="footer.closing"></p>
+
+      <div class="footer-contact" id="footer-contact" hidden>
+        <p class="footer-contact__label" data-i18n="footer.contactUs">Get in touch</p>
+        <div id="footer-contact-links" class="footer-contact__links"></div>
+      </div>
+
+      <p class="footer-updated" id="footer-updated"></p>
+      <p class="footer-privacy" data-i18n="footer.privacy"></p>
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════════════════════════════
+       RSVP CONFIRMATION MODAL
+  ════════════════════════════════════════════════════════ -->
+  <div id="confirm-modal" class="confirm-modal" role="dialog" aria-modal="true" aria-labelledby="confirm-modal-title" hidden>
+    <div class="confirm-modal__inner">
+      <h2 class="confirm-modal__title" id="confirm-modal-title" data-i18n="rsvp.confirmTitle">Check your RSVP</h2>
+      <p data-i18n="rsvp.confirmText"></p>
+      <div id="confirm-summary" class="confirm-summary"></div>
+      <div class="confirm-modal__actions">
+        <button type="button" id="confirm-back-btn" class="btn btn--outline" data-i18n="rsvp.backBtn">Go back and edit</button>
+        <button type="button" id="confirm-send-btn" class="btn btn--primary" data-i18n="rsvp.confirmBtn">Confirm and send</button>
+      </div>
+    </div>
+    <div class="confirm-modal__backdrop" id="confirm-backdrop"></div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════
+       MAIN SCRIPT
+  ════════════════════════════════════════════════════════ -->
+  <script src="script.js"></script>
+</body>
+</html>
