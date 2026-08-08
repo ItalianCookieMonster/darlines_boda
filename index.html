@@ -8,7 +8,7 @@
   <title>Liam & Valentina — 24 April 2027, Barcelona</title>
   <meta name="description"   content="Join Liam and Valentina for their wedding celebration on 24 April 2027 at Estació de França, Barcelona." />
   <meta name="robots"        content="noindex, nofollow" />
-  <meta name="theme-color"   content="#c8916c" />
+  <meta name="theme-color"   content="#123d5a" />
 
   <!-- ── Open Graph ────────────────────────────────────────── -->
   <meta property="og:type"        content="website" />
@@ -25,7 +25,7 @@
   <!-- ── Google Fonts ──────────────────────────────────────── -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet"  href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" />
+  <link rel="stylesheet"  href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Parisienne&family=Inter:wght@300;400;500&display=swap" />
 
   <!-- ── Stylesheet ─────────────────────────────────────────── -->
   <link rel="stylesheet" href="styles.css" />
@@ -45,7 +45,7 @@
     <div class="lang-modal__inner">
       <h1 id="lang-modal-title" class="lang-modal__title" data-i18n="langSelect.title">Choose your language</h1>
       <p class="lang-modal__subtitle" data-i18n="langSelect.subtitle">You can change this at any time from the menu.</p>
-      <ul class="lang-modal__list" role="list">
+      <ul class="lang-modal__list">
         <li><button class="lang-btn lang-btn--full" data-lang="en" aria-label="English">English</button></li>
         <li><button class="lang-btn lang-btn--full" data-lang="ca" aria-label="Català">Català</button></li>
         <li><button class="lang-btn lang-btn--full" data-lang="it" aria-label="Italiano">Italiano</button></li>
@@ -69,7 +69,7 @@
 
       <!-- Desktop nav -->
       <nav class="site-nav" aria-label="Main navigation">
-        <ul class="site-nav__list" role="list" id="nav-list">
+        <ul class="site-nav__list" id="nav-list">
           <li><a href="#event"     class="site-nav__link" data-i18n="nav.event">The celebration</a></li>
           <li><a href="#rsvp"      class="site-nav__link site-nav__link--cta" data-i18n="nav.rsvp">RSVP</a></li>
           <li><a href="#barcelona" class="site-nav__link" data-i18n="nav.barcelona">Barcelona</a></li>
@@ -96,7 +96,7 @@
 
     <!-- Mobile nav -->
     <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
-      <ul class="mobile-nav__list" role="list">
+      <ul class="mobile-nav__list">
         <li><a href="#event"        class="mobile-nav__link" data-i18n="nav.event">The celebration</a></li>
         <li><a href="#rsvp"         class="mobile-nav__link" data-i18n="nav.rsvp">RSVP</a></li>
         <li><a href="#barcelona"    class="mobile-nav__link" data-i18n="nav.barcelona">Barcelona</a></li>
@@ -121,16 +121,27 @@
 
     <!-- ── HERO ────────────────────────────────────────────── -->
     <section id="hero" class="section section--hero" aria-label="Hero">
+      <!-- Deco images sit behind hero__inner (z-index: 0 vs z-index: 1) -->
+      <img src="assets/images/mermaid.webp"         class="deco deco--mermaid"          aria-hidden="true" alt="" role="presentation" loading="lazy" />
+      <img src="assets/images/champagne-flute.webp" class="deco deco--hero-flute deco--hero-flute-r" aria-hidden="true" alt="" role="presentation" loading="lazy" />
+      <img src="assets/images/champagne-flute.webp" class="deco deco--hero-flute deco--hero-flute-l" aria-hidden="true" alt="" role="presentation" loading="lazy" />
+      <img src="assets/images/bubbles.webp"         class="deco deco--hero-bubbles"      aria-hidden="true" alt="" role="presentation" loading="lazy" />
+      <img src="assets/images/wine-and-glass.webp"   class="deco deco--hero-wine"          aria-hidden="true" alt="" role="presentation" loading="lazy" />
+      <img src="assets/images/bubbled.webp"          class="deco deco--hero-bubbled"      aria-hidden="true" alt="" role="presentation" loading="lazy" />
+      <img src="assets/images/cocktail.webp"         class="deco deco--hero-cocktail"     aria-hidden="true" alt="" role="presentation" loading="lazy" />
       <div class="container hero__inner">
         <div class="hero__text">
+          <h1 class="hero__title">Los Darlines<br><span class="hero__title-sub">wedding</span></h1>
           <p class="hero__names">Liam <span class="hero-amp">&amp;</span> Valentina</p>
           <p class="hero__date" id="hero-date">24 April 2027</p>
           <p class="hero__venue">Estació de França, Barcelona</p>
-          <p class="hero__welcome" data-i18n="hero.welcome">Come celebrate with us.</p>
+          <p class="hero__welcome" data-i18n="hero.welcome">Get ready to dance, eat, and celebrate until the night is ours!</p>
           <div class="hero__actions">
             <a href="#rsvp" class="btn btn--primary" data-i18n="hero.rsvpBtn">RSVP</a>
             <a href="#event" class="btn btn--secondary" data-i18n="hero.mapBtn">Find the venue</a>
           </div>
+          <!-- Leaves sit on the card's bottom border, always visible -->
+          <img src="assets/images/leaves.webp" class="hero__leaves" aria-hidden="true" alt="" role="presentation" loading="lazy" />
         </div>
       </div>
     </section>
@@ -139,6 +150,7 @@
     <section id="event" class="section section--alt" aria-labelledby="event-title">
       <div class="container">
         <h2 class="section-title" id="event-title" data-i18n="event.title">The celebration</h2>
+        <img src="assets/images/cocktail.webp" class="deco deco--event-title-cocktail" aria-hidden="true" alt="" role="presentation" loading="lazy" />
         <p class="section-intro" data-i18n="event.intro"></p>
 
         <div class="event-subsections">
@@ -172,14 +184,10 @@
                 </div>
               </div>
 
-              <!-- Image placeholder -->
+              <!-- Venue images -->
               <div class="venue-image-wrap">
-                <div class="venue-image-placeholder" role="img" aria-label="Estació de França, Barcelona">
-                  <span class="venue-image-placeholder__text">📍</span>
-                  <p>Estació de França<br />Barcelona</p>
-                </div>
-                <!-- Replace the placeholder above with an <img> when a photo is available:
-                     <img src="assets/images/venue.jpg" alt="Estació de França, Barcelona" class="venue-image" loading="lazy" /> -->
+                <img src="assets/images/Estació-de-França-600.jpg" alt="Estació de França, Barcelona" class="venue-image venue-image--main" loading="lazy" />
+                <img src="assets/images/bar-station.jpg" alt="Bar at Estació de França" class="venue-image venue-image--secondary" loading="lazy" />
               </div>
             </div>
           </div>
@@ -187,8 +195,7 @@
           <!-- Schedule -->
           <div class="event-subsection" id="event-schedule">
             <h3 class="subsection-title" data-i18n="event.schedule.title">Schedule</h3>
-            <p class="section-intro section-intro--small" data-i18n="schedule.provisional"></p>
-            <ol class="timeline" id="schedule-list" aria-label="Event schedule"></ol>
+            <p class="section-intro section-intro--small" data-i18n="event.schedule.comingSoon"></p>
           </div>
 
           <!-- Dress code & vibe -->
@@ -197,25 +204,28 @@
             <div class="highlight-card" role="note">
               <p class="highlight-card__text" data-i18n="about.card"></p>
             </div>
-            <ul class="about-items" role="list" id="about-items" aria-label="Celebration format details"></ul>
+            <ul class="about-items" id="about-items" aria-label="Celebration format details"></ul>
           </div>
 
           <!-- Gifts -->
           <div class="event-subsection" id="event-gifts">
             <h3 class="subsection-title" data-i18n="event.gifts.title">Gifts</h3>
             <p class="gifts-message" data-i18n="gifts.message"></p>
+            <img src="assets/images/shell-1.webp" class="deco deco--gifts-shell" aria-hidden="true" alt="" role="presentation" loading="lazy" />
           </div>
 
           <!-- Spotify -->
           <div class="event-subsection" id="event-spotify">
             <h3 class="subsection-title" data-i18n="event.spotify.title">Playlist</h3>
             <div class="spotify-card card">
-              <div class="spotify-icon" aria-hidden="true">🎵</div>
-              <p data-i18n="spotify.intro"></p>
-              <div id="spotify-action">
-                <a id="spotify-btn" href="#" class="btn btn--spotify" target="_blank" rel="noopener noreferrer" data-i18n="spotify.btn">Open Spotify playlist</a>
+              <img src="assets/images/music.webp" class="spotify-card__deco" aria-hidden="true" alt="" role="presentation" loading="lazy" />
+              <div class="spotify-card__content">
+                <p data-i18n="spotify.intro"></p>
+                <div id="spotify-action">
+                  <a id="spotify-btn" href="#" class="btn btn--spotify" target="_blank" rel="noopener noreferrer" data-i18n="spotify.btn">Open Spotify playlist</a>
+                </div>
+                <p id="spotify-not-configured" class="not-configured-note" data-i18n="spotify.notConfigured" hidden></p>
               </div>
-              <p id="spotify-not-configured" class="not-configured-note" data-i18n="spotify.notConfigured" hidden></p>
             </div>
           </div>
 
@@ -225,6 +235,7 @@
 
     <!-- ── RSVP ─────────────────────────────────────────────── -->
     <section id="rsvp" class="section" aria-labelledby="rsvp-title">
+      <img src="assets/images/shell-divider.webp" class="deco deco--shell" aria-hidden="true" alt="" role="presentation" loading="lazy" />
       <div class="container container--narrow">
         <h2 class="section-title" id="rsvp-title" data-i18n="rsvp.title">RSVP</h2>
         <p class="section-intro" data-i18n="rsvp.intro"></p>
@@ -285,7 +296,7 @@
 
           <!-- ── Consent ────────────────────────────────── -->
           <div class="form-field form-field--consent">
-            <label class="checkbox-label" for="consent">
+            <label class="checkbox-label" for="consent" >
               <input type="checkbox" id="consent" name="consent" required aria-required="true" aria-describedby="err-consent" />
               <span data-i18n="rsvp.consent.label"></span>
             </label>
@@ -317,26 +328,53 @@
 
     <!-- ── BARCELONA ───────────────────────────────────────── -->
     <section id="barcelona" class="section section--alt" aria-labelledby="barcelona-title">
+      <img src="assets/images/shell-3.webp" class="deco deco--barcelona-shell" aria-hidden="true" alt="" role="presentation" loading="lazy" />
       <div class="container">
         <h2 class="section-title" id="barcelona-title" data-i18n="barcelona.title"></h2>
         <p class="section-intro" data-i18n="barcelona.intro"></p>
 
-        <!-- Neighbourhoods -->
-        <h3 class="subsection-title" data-i18n="barcelona.neighbourhoods.title"></h3>
-        <div id="barcelona-neighbourhoods" class="neighbourhood-list"></div>
+        <!-- Areas -->
+        <div class="barcelona-subsection">
+          <h3 class="subsection-title" data-i18n="barcelona.areas.title"></h3>
+          <p class="subsection-intro" data-i18n="barcelona.areas.intro"></p>
+          <div id="barcelona-areas" class="neighbourhood-list"></div>
+          <img src="assets/images/lemon-branch.webp" class="deco deco--barcelona-stay-lemon" aria-hidden="true" alt="" role="presentation" loading="lazy" />
+        </div>
 
-        <!-- Getting around -->
-        <h3 class="subsection-title" data-i18n="barcelona.transport.title"></h3>
-        <ul id="barcelona-transport" class="tips-list"></ul>
+        <!-- Booking accommodation -->
+        <div class="barcelona-subsection">
+          <h3 class="subsection-title" data-i18n="barcelona.booking.title"></h3>
+          <ul id="barcelona-booking" class="tips-list"></ul>
+        </div>
 
-        <!-- Tips -->
-        <h3 class="subsection-title" data-i18n="barcelona.tips.title"></h3>
-        <ul id="barcelona-tips" class="tips-list"></ul>
+        <!-- Good to know: safety, what to bring, eating & drinking -->
+        <div class="barcelona-subsection">
+          <h3 class="subsection-title" data-i18n="barcelona.practicalInfo.title"></h3>
+          <div class="theme-card-grid">
+            <div class="theme-card">
+              <h4 class="theme-card__title" data-i18n="barcelona.safety.title"></h4>
+              <ul id="barcelona-safety" class="tips-list"></ul>
+            </div>
+            <div class="theme-card">
+              <h4 class="theme-card__title" data-i18n="barcelona.tips.title"></h4>
+              <ul id="barcelona-tips" class="tips-list"></ul>
+            </div>
+            <div class="theme-card">
+              <h4 class="theme-card__title" data-i18n="barcelona.eatingDrinking.title"></h4>
+              <ul id="barcelona-eating-drinking" class="tips-list"></ul>
+            </div>
+          </div>
+          <img src="assets/images/bubbles.webp" class="deco deco--barcelona-safety-bubbles" aria-hidden="true" alt="" role="presentation" loading="lazy" />
+          <img src="assets/images/shell-4.webp" class="deco deco--barcelona-tips-shell" aria-hidden="true" alt="" role="presentation" loading="lazy" />
+        </div>
       </div>
     </section>
 
     <!-- ── OTHER EVENTS ────────────────────────────────────── -->
     <section id="other-events" class="section" aria-labelledby="other-events-title">
+      <img src="assets/images/lemon-branch.webp" class="deco deco--lemon" aria-hidden="true" alt="" role="presentation" loading="lazy" />
+      <img src="assets/images/wine-and-glass.webp" class="deco deco--wine" aria-hidden="true" alt="" role="presentation" loading="lazy" />
+      <img src="assets/images/shell-2.webp" class="deco deco--other-events-shell" aria-hidden="true" alt="" role="presentation" loading="lazy" />
       <div class="container container--narrow">
         <h2 class="section-title" id="other-events-title" data-i18n="otherEvents.title"></h2>
         <p class="section-intro other-events-placeholder" data-i18n="otherEvents.placeholder"></p>
@@ -345,6 +383,8 @@
 
     <!-- ── WHATSAPP ─────────────────────────────────────────── -->
     <section id="whatsapp" class="section section--alt" aria-labelledby="whatsapp-title">
+      <img src="assets/images/cocktails-trio.webp" class="deco deco--cocktails" aria-hidden="true" alt="" role="presentation" loading="lazy" />
+      <img src="assets/images/shell-4.webp" class="deco deco--whatsapp-shell" aria-hidden="true" alt="" role="presentation" loading="lazy" />
       <div class="container container--narrow">
         <div class="whatsapp-card card">
           <div class="whatsapp-icon" aria-hidden="true">💬</div>

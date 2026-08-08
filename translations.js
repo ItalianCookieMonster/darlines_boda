@@ -47,7 +47,7 @@ const TRANSLATIONS = {
     },
 
     hero: {
-      welcome:  'Come celebrate with us.',
+      welcome:  'Get ready to dance, eat, and celebrate until the night is ours!',
       rsvpBtn:  'RSVP',
       mapBtn:   'Find the venue',
     },
@@ -58,8 +58,7 @@ const TRANSLATIONS = {
       card:  'No seating plan. No formal dress code. No pressure. Just food, drinks, music and a lot of people we care about in one place.',
       items: [
         { icon: '🥂', text: 'It\'s a cocktail-style celebration. No banquet, no assigned seats.' },
-        { icon: '👟', text: 'Guests will be standing and moving around — comfortable shoes are a good idea.' },
-        { icon: '👗', text: 'There\'s no dress code. Come looking nice, but above all, come comfortable.' },
+        { icon: '👟', text: 'We\'ll be dancing and there may be some walking too — comfortable shoes will serve you well.' },
         { icon: '🤝', text: 'Our families and groups of friends haven\'t all met before. That\'s kind of the point — come ready to mix, chat and have a good time.' },
       ],
     },
@@ -97,7 +96,7 @@ const TRANSLATIONS = {
       title:    'The celebration',
       intro:    'Everything you need to know about the day.',
       location: { title: 'Location' },
-      schedule: { title: 'Schedule' },
+      schedule: { title: 'Schedule', comingSoon: 'Schedule coming soon — stay tuned!' },
       dresscode:{ title: 'Dress code & vibe' },
       gifts:    { title: 'Gifts' },
       spotify:  { title: 'Playlist' },
@@ -197,31 +196,48 @@ const TRANSLATIONS = {
     barcelona: {
       title: 'Barcelona',
       intro: 'A few things worth knowing to help you plan your time in the city.',
-      neighbourhoods: {
-        title: 'Where to stay',
+      practicalInfo: {
+        title: 'Good to know',
+      },
+      areas: {
+        title: 'Choosing where to stay',
+        intro: 'The venue is right in the city centre and Barcelona is quite small and easy to get around, so I wouldn\'t stress too much about choosing the "perfect" area. Taxi, metro or bus will get you pretty much anywhere easily. Here\'s a general idea of a few different areas:',
         items: [
-          { name: 'El Born / Sant Pere', desc: 'Walking distance from the venue. Lively, full of bars and restaurants. Books up fast.' },
-          { name: 'Barceloneta & Waterfront', desc: 'Right by the sea, 10–15 min walk to the venue. Great if you want beach access.' },
-          { name: 'Eixample', desc: 'Central, well connected by metro. Good range of hotels at different price points.' },
-          { name: 'Gràcia', desc: 'Quieter, neighbourhood feel. A bit further out but easy by metro or taxi.' },
+          { name: 'The old town (Gòtic, Born, Raval)', desc: 'Narrow old streets, lots of people, lots of bars and generally quite lively, especially at night. Very central and fun if you want to be in the middle of everything, but also the most touristy part of the city.' },
+          { name: 'Passeig de Gràcia & Rambla de Catalunya', desc: 'Big boulevards, beautiful buildings, designer shops and generally a bit more polished and elegant. Very central and convenient, especially if you like shopping.' },
+          { name: 'Gràcia & Guinardó', desc: 'This is where we actually live. It\'s quieter and more local, with lots of little squares, bars and restaurants. It\'s slightly further from the centre, but still really easy to get around by metro or taxi.' },
         ],
       },
-      transport: {
-        title: 'Getting around',
+      safety: {
+        title: 'Keep an eye on your things',
         items: [
-          'The venue is well served by public transport — metro lines 4 (Barceloneta) and 3 (Drassanes) are both nearby.',
-          'The T-Casual 10-trip metro card is the most economical option if you\'re using public transport regularly.',
-          'Taxis and Bolt/Cabify are reliable and affordable for late-night journeys.',
-          'The city is very walkable in the centre — most areas around the venue are flat.',
+          'Barcelona is a safe city and it\'s not somewhere I would worry about walking around, but pickpocketing is very common, especially around the main tourist areas and on public transport.',
+          'I would leave passports and important documents at your accommodation and just keep a photo or copy on your phone.',
+          'Same with cards. Bring one with you and leave the others at the hotel. You also really don\'t need much cash here because cards are accepted almost everywhere.',
+        ],
+      },
+      booking: {
+        title: 'Booking your stay',
+        items: [
+          'I would book accommodation relatively early because Barcelona gets expensive quickly and April is already a busy time of year.',
+          'Airbnb is quite limited in the city at the moment.',
+          'Booking.com usually has more options, including aparthotels and tourist apartments, especially if you book in advance.',
+        ],
+      },
+      eatingDrinking: {
+        title: 'Eating & drinking',
+        items: [
+          'Food and drinks in Barcelona generally aren\'t too expensive, but around the main tourist attractions there are definitely places charging tourist prices for very average food.',
+          'Check the menu and prices before sitting down. Also, if every single person eating there looks like a tourist, I would probably keep walking.',
+          'And don\'t judge bars too much by how they look. Some of the very normal neighbourhood bars, the classic "bares de la vida", are often where you\'ll eat really well for very little money.',
+          'I also have an endless list of places for breakfast, lunch, dinner, drinks, vermouth, coffee, basically everything, so just ask me if you want recommendations.',
         ],
       },
       tips: {
-        title: 'Good to know',
+        title: 'What to bring',
         items: [
-          'April in Barcelona is busy. Book accommodation as early as you can — prices rise significantly as the date approaches.',
-          'The weather in April is mild but evenings can be cool. Bring a light jacket.',
-          'Comfortable shoes are a must — both for the event itself and for exploring the city.',
-          'Barcelona is generally very safe, but keep an eye on your belongings in busy tourist areas.',
+          'April is normally mild, but it can get a bit chilly in the evening, so bring a light jacket.',
+          'And definitely bring comfortable shoes. You\'ll probably end up walking a lot more than you expect, both at the wedding and around the city.',
         ],
       },
     },
@@ -258,7 +274,7 @@ const TRANSLATIONS = {
 
     spotify: {
       title:         'Add a song to the playlist',
-      intro:         'Help us build the soundtrack for the afternoon. Add something you\'d genuinely like to hear — but remember that everyone else has to listen to it too.',
+      intro:         'We\'ll have a DJ later in the evening, but during the celebration we\'ll be playing music from our shared playlist. Add your favourite songs — any genre, any vibe. We\'ll listen, dance and laugh together.',
       btn:           'Open Spotify playlist',
       notConfigured: 'The playlist link will be added here soon.',
     },
@@ -383,7 +399,7 @@ const TRANSLATIONS = {
     },
 
     hero: {
-      welcome:  'Veniu a celebrar-ho amb nosaltres.',
+      welcome:  'Prepareu-vos per ballar, menjar i celebrar fins que la nit sigui nostra!',
       rsvpBtn:  'Confirmeu assistència',
       mapBtn:   'Trobar el lloc',
     },
@@ -394,8 +410,7 @@ const TRANSLATIONS = {
       card:  'Sense plànol de taules. Sense codi de vestimenta. Sense pressió. Menjar, begudes, música i molta gent que estimem reunida en un sol lloc.',
       items: [
         { icon: '🥂', text: 'És una celebració estil còctel. Sense sopar formal, sense lloc assignat.' },
-        { icon: '👟', text: 'Els convidats estaran drets i es mouran lliurement — unes sabates còmodes us aniran molt bé.' },
-        { icon: '👗', text: 'No hi ha codi de vestimenta. Veniu elegants però, sobretot, còmodes.' },
+        { icon: '👟', text: 'Hi haurà ball i potser una mica de caminada — unes sabates còmodes us aniran molt bé.' },
         { icon: '🤝', text: 'Les nostres famílies i grups d\'amics no es coneixen tots. Precisament d\'això es tracta — veniu a conèixer gent nova, xerrar i gaudir.' },
       ],
     },
@@ -433,7 +448,7 @@ const TRANSLATIONS = {
       title:    'La celebració',
       intro:    'Tot el que necessiteu saber sobre el dia.',
       location: { title: 'Lloc' },
-      schedule: { title: 'Programa' },
+      schedule: { title: 'Programa', comingSoon: 'Programa pròximament — esteu pendents!' },
       dresscode:{ title: 'Vestimenta i ambient' },
       gifts:    { title: 'Regals' },
       spotify:  { title: 'Playlist' },
@@ -533,31 +548,48 @@ const TRANSLATIONS = {
     barcelona: {
       title: 'Barcelona',
       intro: 'Algunes coses que val la pena saber per ajudar-vos a planificar el temps a la ciutat.',
-      neighbourhoods: {
-        title: 'On allotjar-se',
+      practicalInfo: {
+        title: 'Coses a tenir en compte',
+      },
+      areas: {
+        title: 'Triar on allotjar-vos',
+        intro: 'El local és al bell mig del centre de la ciutat i Barcelona és bastant petita i fàcil de moure-s\'hi, així que jo no m\'amoïnaria gaire per triar la zona "perfecta". Amb taxi, metro o bus arribareu fàcilment gairebé a qualsevol lloc. Aquí teniu una idea general de com són algunes zones:',
         items: [
-          { name: 'El Born / Sant Pere', desc: 'A poca distància a peu del local. Animat, ple de bars i restaurants. Es reserva de pressa.' },
-          { name: 'Barceloneta i el front marítim', desc: 'Just al costat del mar, a 10–15 minuts a peu del local. Ideal si voleu platja a prop.' },
-          { name: 'Eixample', desc: 'Cèntric i ben connectat en metro. Bona oferta d\'hotels a diferents preus.' },
-          { name: 'Gràcia', desc: 'Més tranquil, amb ambient de barri. Una mica més lluny, però fàcil en metro o taxi.' },
+          { name: 'El casc antic (Gòtic, Born, Raval)', desc: 'Carrers estrets i antics, molta gent, molts bars i, en general, bastant animat, sobretot de nit. Molt cèntric i divertit si voleu estar enmig de tot, però també la part més turística de la ciutat.' },
+          { name: 'Passeig de Gràcia i Rambla de Catalunya', desc: 'Avingudes grans, edificis preciosos, botigues de disseny i, en general, una mica més elegant i polit. Molt cèntric i còmode, sobretot si us agrada anar de compres.' },
+          { name: 'Gràcia i el Guinardó', desc: 'Aquí és on vivim nosaltres. És més tranquil i local, amb moltes placetes, bars i restaurants. Queda una mica més lluny del centre, però tot i així és molt fàcil moure-s\'hi amb metro o taxi.' },
         ],
       },
-      transport: {
-        title: 'Com moure\'s',
+      safety: {
+        title: 'Vigileu les vostres pertinences',
         items: [
-          'El local té molt bon transport públic — les línies de metro L4 (Barceloneta) i L3 (Drassanes) són a prop.',
-          'La T-Casual de 10 viatges és l\'opció més econòmica si feu servir el metro sovint.',
-          'Els taxis i Bolt/Cabify són fiables i assequibles per als desplaçaments de nit.',
-          'El centre és molt caminable — la majoria de zones al voltant del local son planes.',
+          'Barcelona és una ciutat segura i no és un lloc que em preocupés caminar-hi, però els robatoris de butxaca són molt habituals, sobretot a les zones turístiques principals i al transport públic.',
+          'Jo deixaria el passaport i els documents importants a l\'allotjament, i només portaria una foto o una còpia al mòbil.',
+          'El mateix amb les targetes. Porteu-ne una amb vosaltres i deixeu la resta a l\'hotel. Tampoc no us caldrà gaire efectiu, perquè gairebé a tot arreu es pot pagar amb targeta.',
+        ],
+      },
+      booking: {
+        title: 'Reservar allotjament',
+        items: [
+          'Jo reservaria l\'allotjament amb una mica d\'antelació, perquè Barcelona s\'encareix de seguida i l\'abril ja és una època bastant concorreguda.',
+          'A Airbnb hi ha poca disponibilitat a la ciutat ara mateix.',
+          'A Booking.com sol haver-hi més opcions, com aparthotels i pisos turístics, sobretot si reserveu amb temps.',
+        ],
+      },
+      eatingDrinking: {
+        title: 'Menjar i beure',
+        items: [
+          'Menjar i beure a Barcelona en general no sol ser gaire car, però al voltant de les atraccions turístiques principals sí que hi ha llocs que cobren preus de turista per menjar molt normalet.',
+          'Mireu la carta i els preus abans de seure. I si totes les persones que hi mengen semblen turistes, jo probablement seguiria caminant.',
+          'I no jutgeu els bars només per l\'aspecte. Alguns dels bars de barri més normals, els clàssics "bars de tota la vida", són sovint on menjareu molt bé per molt poc.',
+          'A més, tinc una llista infinita de llocs per esmorzar, dinar, sopar, prendre una copa, vermut, cafè, bàsicament de tot, així que només cal que me\'l demaneu si voleu recomanacions.',
         ],
       },
       tips: {
-        title: 'Coses a tenir en compte',
+        title: 'Què portar',
         items: [
-          'L\'abril a Barcelona és temporada alta. Reserveu allotjament el més aviat possible — els preus pugen molt a mesura que s\'acosta la data.',
-          'El temps a l\'abril és suau, però els vespres poden ser frescos. Porteu una jaqueta lleugera.',
-          'Les sabates còmodes son imprescindibles — tant per a la celebració com per passejar per la ciutat.',
-          'Barcelona és generalment molt segura, però vigileu les vostres pertinences a les zones turístiques concorregudes.',
+          'L\'abril sol ser suau, però al vespre pot refrescar una mica, així que porteu una jaqueta lleugera.',
+          'I porteu sabates còmodes sens falta. Probablement caminareu molt més del que us penseu, tant al casament com per la ciutat.',
         ],
       },
     },
@@ -594,7 +626,7 @@ const TRANSLATIONS = {
 
     spotify: {
       title:         'Afegiu una cançó a la llista',
-      intro:         'Ajudeu-nos a crear la banda sonora de la tarda. Afegiu alguna cosa que realment vulgueu escoltar — però recordeu que tothom ho haurà de suportar.',
+      intro:         'Tindrem un DJ a la nit, però durant la celebració posarem música de la nostra llista compartida. Afegiu les vostres cançons preferides — qualsevol gènere, qualsevol estil. Escoltarem, ballarem i riurem junts.',
       btn:           'Obrir la llista de Spotify',
       notConfigured: 'L\'enllaç a la llista s\'afegirà aquí properament.',
     },
@@ -719,7 +751,7 @@ const TRANSLATIONS = {
     },
 
     hero: {
-      welcome:  'Venite a festeggiare con noi.',
+      welcome:  'Preparatevi a ballare, mangiare e festeggiare fino a fare notte!',
       rsvpBtn:  'Conferma presenza',
       mapBtn:   'Trova il luogo',
     },
@@ -730,8 +762,7 @@ const TRANSLATIONS = {
       card:  'Nessun piano di posti. Nessun codice d\'abbigliamento. Nessuna pressione. Solo cibo, drink, musica e tante persone care riunite in un posto.',
       items: [
         { icon: '🥂', text: 'È una festa in stile cocktail. Niente banchetto formale, niente posti assegnati.' },
-        { icon: '👟', text: 'Gli ospiti saranno in piedi e si sposteranno liberamente — scarpe comode, assolutamente.' },
-        { icon: '👗', text: 'Non c\'è un codice d\'abbigliamento. Venite bene ma, soprattutto, comodi.' },
+        { icon: '👟', text: 'Si ballerà e potrebbe esserci un po\' di cammino — scarpe comode sono una buona idea.' },
         { icon: '🤝', text: 'Le nostre famiglie e i nostri gruppi di amici non si conoscono tutti. È proprio questo il punto — venite pronti a socializzare, chiacchierare e divertirvi.' },
       ],
     },
@@ -769,7 +800,7 @@ const TRANSLATIONS = {
       title:    'La festa',
       intro:    'Tutto quello che dovete sapere sulla giornata.',
       location: { title: 'Luogo' },
-      schedule: { title: 'Programma' },
+      schedule: { title: 'Programma', comingSoon: 'Programma in arrivo — restate sintonizzati!' },
       dresscode:{ title: 'Abbigliamento e atmosfera' },
       gifts:    { title: 'Regali' },
       spotify:  { title: 'Playlist' },
@@ -869,31 +900,48 @@ const TRANSLATIONS = {
     barcelona: {
       title: 'Barcellona',
       intro: 'Alcune cose utili da sapere per organizzare il vostro soggiorno in città.',
-      neighbourhoods: {
+      practicalInfo: {
+        title: 'Cose da sapere',
+      },
+      areas: {
         title: 'Dove alloggiare',
+        intro: 'Il locale è proprio nel centro città e Barcellona è una città piuttosto piccola e facile da girare, quindi io non mi preoccuperei troppo di trovare la zona "perfetta". Con taxi, metro o autobus arriverete praticamente ovunque senza problemi. Ecco un\'idea generale di come sono alcune zone:',
         items: [
-          { name: 'El Born / Sant Pere', desc: 'A pochi passi dal locale. Vivace, pieno di bar e ristoranti. Si riempie in fretta.' },
-          { name: 'Barceloneta e il lungomare', desc: 'Vicino al mare, a 10–15 minuti a piedi dal locale. Ideale se volete la spiaggia.' },
-          { name: 'Eixample', desc: 'Centrale, ben collegato con la metro. Buona scelta di hotel a prezzi diversi.' },
-          { name: 'Gràcia', desc: 'Più tranquillo, con un\'atmosfera di quartiere. Un po\' più lontano, ma comodo in metro o taxi.' },
+          { name: 'Il centro storico (Gòtic, Born, Raval)', desc: 'Vicoli stretti e antichi, tanta gente, tanti bar e in generale piuttosto vivace, soprattutto di sera. Molto centrale e divertente se volete stare nel cuore di tutto, ma anche la parte più turistica della città.' },
+          { name: 'Passeig de Gràcia e Rambla de Catalunya', desc: 'Grandi viali, palazzi bellissimi, negozi di design e in generale un po\' più elegante e curato. Molto centrale e comodo, soprattutto se vi piace lo shopping.' },
+          { name: 'Gràcia e il Guinardó', desc: 'È qui che viviamo davvero noi. È più tranquillo e locale, con tante piazzette, bar e ristoranti. È un po\' più lontano dal centro, ma comunque facilissimo da raggiungere in metro o taxi.' },
         ],
       },
-      transport: {
-        title: 'Come spostarsi',
+      safety: {
+        title: 'Attenzione ai vostri effetti personali',
         items: [
-          'Il locale è ben servito dai trasporti pubblici — le linee metro L4 (Barceloneta) e L3 (Drassanes) sono nelle vicinanze.',
-          'La T-Casual da 10 viaggi è l\'opzione più economica se usate spesso la metro.',
-          'Taxi e Bolt/Cabify sono affidabili e convenienti per gli spostamenti serali.',
-          'Il centro è molto comodo da girare a piedi — la maggior parte delle zone intorno al locale è pianeggiante.',
+          'Barcellona è una città sicura e non è un posto in cui mi preoccuperei di girare a piedi, ma i borseggi sono molto comuni, soprattutto nelle zone turistiche principali e sui mezzi pubblici.',
+          'Io lascerei il passaporto e i documenti importanti in albergo, tenendo solo una foto o una copia sul telefono.',
+          'Lo stesso vale per le carte. Portatene una con voi e lasciate le altre in hotel. Inoltre non vi servirà molto contante, perché le carte sono accettate quasi ovunque.',
+        ],
+      },
+      booking: {
+        title: 'Prenotare l\'alloggio',
+        items: [
+          'Io prenoterei l\'alloggio con un certo anticipo, perché a Barcellona i prezzi salgono in fretta e aprile è già un periodo piuttosto affollato.',
+          'Su Airbnb al momento c\'è poca disponibilità in città.',
+          'Su Booking.com di solito ci sono più opzioni, inclusi aparthotel e appartamenti turistici, soprattutto se prenotate con anticipo.',
+        ],
+      },
+      eatingDrinking: {
+        title: 'Mangiare e bere',
+        items: [
+          'Mangiare e bere a Barcellona in genere non è troppo caro, ma intorno alle principali attrazioni turistiche ci sono sicuramente posti che fanno pagare prezzi da turisti per un cibo molto nella media.',
+          'Controllate il menù e i prezzi prima di sedervi. E se tutte le persone sedute lì sembrano turisti, io probabilmente continuerei a camminare.',
+          'E non giudicate troppo i bar dall\'aspetto. Alcuni dei bar di quartiere più semplici, i classici "bares de la vida", sono spesso i posti dove si mangia benissimo spendendo pochissimo.',
+          'Ho anche una lista infinita di posti per colazione, pranzo, cena, aperitivo, vermouth, caffè, praticamente di tutto, quindi chiedetemi pure se volete qualche consiglio.',
         ],
       },
       tips: {
-        title: 'Cose da sapere',
+        title: 'Cosa portare',
         items: [
-          'Aprile a Barcellona è un periodo affollato. Prenotate l\'alloggio il prima possibile — i prezzi aumentano significativamente avvicinandosi alla data.',
-          'Il clima di aprile è mite, ma le serate possono essere fresche. Portate una giacca leggera.',
-          'Le scarpe comode sono indispensabili — sia per la festa che per esplorare la città.',
-          'Barcellona è generalmente molto sicura, ma fate attenzione agli effetti personali nelle zone turistiche affollate.',
+          'Ad aprile di solito fa mite, ma la sera può rinfrescare un po\', quindi portate una giacca leggera.',
+          'E portate assolutamente scarpe comode. Probabilmente camminerete molto più di quanto pensiate, sia al matrimonio che in giro per la città.',
         ],
       },
     },
@@ -930,7 +978,7 @@ const TRANSLATIONS = {
 
     spotify: {
       title:         'Aggiungi una canzone alla playlist',
-      intro:         'Aiutateci a costruire la colonna sonora del pomeriggio. Aggiungete qualcosa che vorreste davvero sentire — ma ricordate che dovranno sentirla tutti.',
+      intro:         'Più tardi ci sarà un DJ, ma durante la festa metteremo musica dalla nostra playlist condivisa. Aggiungete le vostre canzoni preferite — qualsiasi genere, qualsiasi stile. Ascolteremo, balleremo e rideremo insieme.',
       btn:           'Apri la playlist Spotify',
       notConfigured: 'Il link alla playlist sarà aggiunto qui presto.',
     },
@@ -1055,7 +1103,7 @@ const TRANSLATIONS = {
     },
 
     hero: {
-      welcome:  'Venid a celebrarlo con nosotros.',
+      welcome:  '¡Prepárense para bailar, comer y celebrar hasta que la noche sea nuestra!',
       rsvpBtn:  'Confirmar asistencia',
       mapBtn:   'Cómo llegar',
     },
@@ -1066,8 +1114,7 @@ const TRANSLATIONS = {
       card:  'Sin plano de mesas. Sin código de vestimenta. Sin presiones. Comida, bebida, música y mucha gente a la que queremos, todos en el mismo lugar.',
       items: [
         { icon: '🥂', text: 'Es una celebración estilo cóctel. Sin cena formal, sin asientos asignados.' },
-        { icon: '👟', text: 'Los invitados estarán de pie y se moverán libremente — unos zapatos cómodos son imprescindibles.' },
-        { icon: '👗', text: 'No hay código de vestimenta. Venid elegantes pero, sobre todo, cómodos.' },
+        { icon: '👟', text: 'Habrá baile y puede que algo de caminata — unos zapatos cómodos os vendrán bien.' },
         { icon: '🤝', text: 'Nuestras familias y grupos de amigos no se conocen entre sí. Ese es precisamente el objetivo — venid a conocer gente, charlar y pasarlo bien.' },
       ],
     },
@@ -1105,7 +1152,7 @@ const TRANSLATIONS = {
       title:    'La celebración',
       intro:    'Todo lo que necesitáis saber sobre el día.',
       location: { title: 'Lugar' },
-      schedule: { title: 'Programa' },
+      schedule: { title: 'Programa', comingSoon: '¡Programa próximamente — ¡estén atentos!' },
       dresscode:{ title: 'Vestimenta y ambiente' },
       gifts:    { title: 'Regalos' },
       spotify:  { title: 'Playlist' },
@@ -1205,31 +1252,48 @@ const TRANSLATIONS = {
     barcelona: {
       title: 'Barcelona',
       intro: 'Algunas cosas que vale la pena saber para ayudaros a planificar vuestra estancia en la ciudad.',
-      neighbourhoods: {
-        title: 'Dónde alojarse',
+      practicalInfo: {
+        title: 'Cosas a tener en cuenta',
+      },
+      areas: {
+        title: 'Elegir dónde alojaros',
+        intro: 'El local está en pleno centro de la ciudad y Barcelona es bastante pequeña y fácil de moverse, así que yo no me agobiaría demasiado por elegir la zona "perfecta". En taxi, metro o bus llegaréis fácilmente a casi cualquier sitio. Aquí tenéis una idea general de cómo son algunas zonas:',
         items: [
-          { name: 'El Born / Sant Pere', desc: 'A poca distancia a pie del local. Animado, lleno de bares y restaurantes. Se llena rápido.' },
-          { name: 'Barceloneta y el frente marítimo', desc: 'Junto al mar, a 10–15 minutos a pie del local. Ideal si queréis acceso a la playa.' },
-          { name: 'Eixample', desc: 'Céntrico y bien comunicado en metro. Buena oferta de hoteles a distintos precios.' },
-          { name: 'Gràcia', desc: 'Más tranquilo, con ambiente de barrio. Un poco más lejos, pero fácil en metro o taxi.' },
+          { name: 'El casco antiguo (Gòtic, Born, Raval)', desc: 'Calles estrechas y antiguas, mucha gente, muchos bares y, en general, bastante animado, sobre todo de noche. Muy céntrico y divertido si queréis estar en medio de todo, pero también la parte más turística de la ciudad.' },
+          { name: 'Passeig de Gràcia y Rambla de Catalunya', desc: 'Avenidas grandes, edificios preciosos, tiendas de diseño y, en general, algo más elegante y cuidado. Muy céntrico y cómodo, sobre todo si os gusta ir de compras.' },
+          { name: 'Gràcia y el Guinardó', desc: 'Aquí es donde vivimos nosotros de verdad. Es más tranquilo y local, con muchas plazas pequeñas, bares y restaurantes. Está un poco más alejado del centro, pero aun así es muy fácil moverse en metro o taxi.' },
         ],
       },
-      transport: {
-        title: 'Cómo moverse',
+      safety: {
+        title: 'Vigilad vuestras pertenencias',
         items: [
-          'El local tiene muy buen transporte público — las líneas de metro L4 (Barceloneta) y L3 (Drassanes) están cerca.',
-          'La T-Casual de 10 viajes es la opción más económica si vais a usar el metro con frecuencia.',
-          'Los taxis y Bolt/Cabify son fiables y asequibles para los desplazamientos nocturnos.',
-          'El centro es muy cómodo para caminar — la mayoría de zonas alrededor del local son llanas.',
+          'Barcelona es una ciudad segura y no es un sitio por el que me preocuparía caminar, pero los carteristas son muy habituales, sobre todo en las zonas turísticas principales y en el transporte público.',
+          'Yo dejaría el pasaporte y los documentos importantes en el alojamiento, y llevaría solo una foto o una copia en el móvil.',
+          'Lo mismo con las tarjetas. Llevad una con vosotros y dejad el resto en el hotel. Tampoco necesitaréis mucho efectivo, porque se paga con tarjeta prácticamente en todas partes.',
+        ],
+      },
+      booking: {
+        title: 'Reservar alojamiento',
+        items: [
+          'Yo reservaría el alojamiento con cierta antelación, porque Barcelona se encarece rápido y abril ya es una época bastante concurrida.',
+          'En Airbnb hay poca disponibilidad en la ciudad ahora mismo.',
+          'En Booking.com suele haber más opciones, incluyendo aparthoteles y pisos turísticos, sobre todo si reserváis con tiempo.',
+        ],
+      },
+      eatingDrinking: {
+        title: 'Comer y beber',
+        items: [
+          'Comer y beber en Barcelona en general no suele ser muy caro, pero alrededor de las atracciones turísticas principales sí hay sitios que cobran precios de turista por una comida bastante normalita.',
+          'Mirad la carta y los precios antes de sentaros. Y si todas las personas que están comiendo ahí parecen turistas, yo probablemente seguiría caminando.',
+          'Y no juzguéis los bares solo por su aspecto. Algunos de los bares de barrio más sencillos, los clásicos "bares de la vida", son a menudo donde mejor comeréis por muy poco dinero.',
+          'Además, tengo una lista infinita de sitios para desayunar, comer, cenar, tomar algo, vermú, café, básicamente de todo, así que preguntadme si queréis recomendaciones.',
         ],
       },
       tips: {
-        title: 'Cosas a tener en cuenta',
+        title: 'Qué llevar',
         items: [
-          'Abril en Barcelona es temporada alta. Reservad alojamiento cuanto antes — los precios suben considerablemente a medida que se acerca la fecha.',
-          'El tiempo en abril es suave, pero las noches pueden ser frescas. Llevad una chaqueta ligera.',
-          'Los zapatos cómodos son imprescindibles — tanto para la celebración como para explorar la ciudad.',
-          'Barcelona es generalmente muy segura, pero vigilad vuestras pertenencias en las zonas turísticas concurridas.',
+          'Abril suele ser suave, pero por la noche puede refrescar un poco, así que llevad una chaqueta ligera.',
+          'Y llevad zapatos cómodos sin falta. Probablemente caminaréis mucho más de lo que esperáis, tanto en la boda como por la ciudad.',
         ],
       },
     },
@@ -1266,7 +1330,7 @@ const TRANSLATIONS = {
 
     spotify: {
       title:         'Añade una canción a la playlist',
-      intro:         'Ayudadnos a construir la banda sonora de la tarde. Añadid algo que realmente queráis escuchar — pero recordad que todos los demás también tendrán que oírla.',
+      intro:         'Tendremos DJ entrada la noche, pero durante la celebración pondremos música de nuestra playlist compartida. Añadid vuestras canciones favoritas — cualquier género, cualquier rollo. Escucharemos, bailaremos y nos reiremos juntos.',
       btn:           'Abrir playlist de Spotify',
       notConfigured: 'El enlace a la playlist se añadirá aquí próximamente.',
     },
@@ -1391,7 +1455,7 @@ const TRANSLATIONS = {
     },
 
     hero: {
-      welcome:  'Venez fêter ça avec nous.',
+      welcome:  "Préparez-vous à danser, manger et célébrer jusqu'au bout de la nuit !",
       rsvpBtn:  'Confirmer ma présence',
       mapBtn:   'Trouver le lieu',
     },
@@ -1402,8 +1466,7 @@ const TRANSLATIONS = {
       card:  'Pas de plan de table. Pas de code vestimentaire. Pas de pression. Juste de la bonne nourriture, des verres, de la musique et plein de gens qu\'on aime, tous réunis.',
       items: [
         { icon: '🥂', text: 'C\'est une célébration façon cocktail. Pas de banquet formel, pas de places assignées.' },
-        { icon: '👟', text: 'Les invités seront debout et libres de circuler — des chaussures confortables s\'imposent.' },
-        { icon: '👗', text: 'Pas de code vestimentaire. Venez élégants, mais surtout à l\'aise.' },
+        { icon: '👟', text: 'On dansera et il pourrait y avoir un peu de marche — des chaussures confortables seront les bienvenues.' },
         { icon: '🤝', text: 'Nos familles et groupes d\'amis ne se connaissent pas tous. C\'est justement l\'idée — venez prêts à vous mélanger, discuter et passer un bon moment.' },
       ],
     },
@@ -1441,7 +1504,7 @@ const TRANSLATIONS = {
       title:    'La fête',
       intro:    'Tout ce que vous devez savoir sur la journée.',
       location: { title: 'Lieu' },
-      schedule: { title: 'Programme' },
+      schedule: { title: 'Programme', comingSoon: 'Programme à venir — restez connectés !' },
       dresscode:{ title: 'Tenue et ambiance' },
       gifts:    { title: 'Cadeaux' },
       spotify:  { title: 'Playlist' },
@@ -1541,31 +1604,48 @@ const TRANSLATIONS = {
     barcelona: {
       title: 'Barcelone',
       intro: 'Quelques infos utiles pour vous aider à planifier votre séjour en ville.',
-      neighbourhoods: {
-        title: 'Où séjourner',
+      practicalInfo: {
+        title: 'Bon à savoir',
+      },
+      areas: {
+        title: 'Choisir où loger',
+        intro: 'Le lieu est en plein centre-ville et Barcelone est une ville plutôt petite et facile à parcourir, donc je ne me prendrais pas trop la tête pour trouver le quartier "parfait". En taxi, métro ou bus, vous arriverez facilement presque partout. Voici une idée générale de quelques quartiers :',
         items: [
-          { name: 'El Born / Sant Pere', desc: 'À distance de marche du lieu. Animé, plein de bars et de restaurants. Se réserve vite.' },
-          { name: 'Barceloneta et le front de mer', desc: 'Juste au bord de la mer, à 10–15 min à pied du lieu. Idéal si vous voulez la plage.' },
-          { name: 'Eixample', desc: 'Central, bien desservi par le métro. Bonne gamme d\'hôtels à différents prix.' },
-          { name: 'Gràcia', desc: 'Plus calme, ambiance de quartier. Un peu plus loin, mais facile en métro ou taxi.' },
+          { name: 'La vieille ville (Gòtic, Born, Raval)', desc: 'Des ruelles étroites et anciennes, beaucoup de monde, beaucoup de bars et, en général, une ambiance assez animée, surtout le soir. Très central et sympa si vous voulez être en plein cœur de tout, mais aussi la partie la plus touristique de la ville.' },
+          { name: 'Passeig de Gràcia et Rambla de Catalunya', desc: 'De grandes avenues, de beaux immeubles, des boutiques de designers et, en général, un côté un peu plus chic et soigné. Très central et pratique, surtout si vous aimez faire du shopping.' },
+          { name: 'Gràcia et le Guinardó', desc: 'C\'est là que nous vivons vraiment. C\'est plus calme et plus local, avec plein de petites places, de bars et de restaurants. C\'est un peu plus loin du centre, mais ça reste très facile à rejoindre en métro ou en taxi.' },
         ],
       },
-      transport: {
-        title: 'Se déplacer',
+      safety: {
+        title: 'Surveillez vos affaires',
         items: [
-          'Le lieu est bien desservi par les transports en commun — les lignes de métro L4 (Barceloneta) et L3 (Drassanes) sont à proximité.',
-          'La T-Casual 10 voyages est l\'option la plus économique si vous utilisez régulièrement le métro.',
-          'Les taxis et Bolt/Cabify sont fiables et abordables pour les trajets en soirée.',
-          'Le centre-ville se parcourt très bien à pied — la plupart des zones autour du lieu sont plates.',
+          'Barcelone est une ville sûre, et ce n\'est pas un endroit qui m\'inquiéterait pour s\'y promener, mais les vols à la tire sont très fréquents, surtout dans les grandes zones touristiques et dans les transports en commun.',
+          'Personnellement, je laisserais les passeports et les documents importants à l\'hébergement, et je garderais juste une photo ou une copie sur mon téléphone.',
+          'Pareil pour les cartes. Prenez-en une avec vous et laissez les autres à l\'hôtel. Vous n\'aurez pas non plus besoin de beaucoup de liquide, la carte est acceptée presque partout.',
+        ],
+      },
+      booking: {
+        title: 'Réserver votre hébergement',
+        items: [
+          'Je réserverais l\'hébergement relativement tôt, parce que Barcelone devient vite chère et qu\'avril est déjà une période assez chargée.',
+          'Sur Airbnb, il y a assez peu de disponibilités en ville en ce moment.',
+          'Sur Booking.com, il y a en général plus d\'options, comme des aparthotels et des appartements touristiques, surtout si vous réservez à l\'avance.',
+        ],
+      },
+      eatingDrinking: {
+        title: 'Manger et boire',
+        items: [
+          'Manger et boire à Barcelone n\'est en général pas trop cher, mais autour des principales attractions touristiques, il y a clairement des endroits qui font payer des prix de touristes pour une cuisine très moyenne.',
+          'Vérifiez la carte et les prix avant de vous asseoir. Et si toutes les personnes attablées ont l\'air de touristes, je continuerais probablement mon chemin.',
+          'Et ne jugez pas trop les bars sur leur apparence. Certains des bars de quartier les plus simples, les fameux "bares de la vida", sont souvent ceux où vous mangerez le mieux pour vraiment pas cher.',
+          'J\'ai aussi une liste infinie d\'adresses pour le petit-déjeuner, le déjeuner, le dîner, prendre un verre, un vermouth, un café, bref, pour tout, alors demandez-moi si vous voulez des recommandations.',
         ],
       },
       tips: {
-        title: 'Bon à savoir',
+        title: 'Quoi emporter',
         items: [
-          'Avril à Barcelone est très fréquenté. Réservez votre hébergement le plus tôt possible — les prix augmentent sensiblement à l\'approche de la date.',
-          'Le temps en avril est doux, mais les soirées peuvent être fraîches. Prévoyez une veste légère.',
-          'Des chaussures confortables sont indispensables — aussi bien pour la fête que pour se balader en ville.',
-          'Barcelone est généralement très sûre, mais restez vigilants avec vos affaires dans les zones touristiques animées.',
+          'Avril est généralement doux, mais les soirées peuvent être un peu fraîches, alors prenez une veste légère.',
+          'Et prenez absolument des chaussures confortables. Vous marcherez sans doute bien plus que prévu, aussi bien au mariage qu\'en vous baladant dans la ville.',
         ],
       },
     },
@@ -1602,7 +1682,7 @@ const TRANSLATIONS = {
 
     spotify: {
       title:         'Ajoutez une chanson à la playlist',
-      intro:         'Aidez-nous à construire la bande-son de l\'après-midi. Ajoutez quelque chose que vous aimeriez vraiment entendre — mais souvenez-vous que tout le monde devra l\'écouter aussi.',
+      intro:         'Nous aurons un DJ en soirée, mais pendant la fête nous jouerons de la musique depuis notre playlist partagée. Ajoutez vos chansons préférées — tous les genres, toutes les ambiances. On écoutera, on dansera et on rira ensemble.',
       btn:           'Ouvrir la playlist Spotify',
       notConfigured: 'Le lien vers la playlist sera ajouté ici bientôt.',
     },

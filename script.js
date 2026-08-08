@@ -280,11 +280,11 @@ function renderAbout() {
 ───────────────────────────────────────────────────────────────*/
 
 function renderBarcelona() {
-  const neighList = document.getElementById('barcelona-neighbourhoods');
-  if (neighList) {
-    const items = t('barcelona.neighbourhoods.items');
+  const areasList = document.getElementById('barcelona-areas');
+  if (areasList) {
+    const items = t('barcelona.areas.items');
     if (Array.isArray(items)) {
-      neighList.innerHTML = items.map(item => `
+      areasList.innerHTML = items.map(item => `
         <div class="neighbourhood-card">
           <p class="neighbourhood-card__name">${escapeHtml(item.name)}</p>
           <p class="neighbourhood-card__desc">${escapeHtml(item.desc)}</p>
@@ -293,20 +293,18 @@ function renderBarcelona() {
     }
   }
 
-  const transportList = document.getElementById('barcelona-transport');
-  if (transportList) {
-    const items = t('barcelona.transport.items');
-    if (Array.isArray(items)) {
-      transportList.innerHTML = items.map(item => `<li>${escapeHtml(item)}</li>`).join('');
-    }
-  }
+  renderBarcelonaTipsList('barcelona-safety', 'barcelona.safety.items');
+  renderBarcelonaTipsList('barcelona-booking', 'barcelona.booking.items');
+  renderBarcelonaTipsList('barcelona-eating-drinking', 'barcelona.eatingDrinking.items');
+  renderBarcelonaTipsList('barcelona-tips', 'barcelona.tips.items');
+}
 
-  const tipsList = document.getElementById('barcelona-tips');
-  if (tipsList) {
-    const items = t('barcelona.tips.items');
-    if (Array.isArray(items)) {
-      tipsList.innerHTML = items.map(item => `<li>${escapeHtml(item)}</li>`).join('');
-    }
+function renderBarcelonaTipsList(elementId, translationKey) {
+  const list = document.getElementById(elementId);
+  if (!list) return;
+  const items = t(translationKey);
+  if (Array.isArray(items)) {
+    list.innerHTML = items.map(item => `<li>${escapeHtml(item)}</li>`).join('');
   }
 }
 
@@ -315,25 +313,7 @@ function renderBarcelona() {
 ───────────────────────────────────────────────────────────────*/
 
 function renderSchedule() {
-  const list = document.getElementById('schedule-list');
-  if (!list) return;
-
-  list.innerHTML = SITE_CONFIG.schedule.map(item => {
-    const itemT = t(`schedule.items.${item.id}`);
-    const label = typeof itemT === 'object' ? itemT.label : item.id;
-    const desc  = typeof itemT === 'object' ? itemT.desc  : '';
-    const hasTime = !!item.time;
-
-    return `
-      <li class="timeline-item">
-        <span class="timeline-dot" aria-hidden="true"></span>
-        ${hasTime ? `<span class="timeline-time">${escapeHtml(item.time)}</span>` : ''}
-        <p class="timeline-label">${escapeHtml(label)}</p>
-        ${desc ? `<p class="timeline-desc">${escapeHtml(desc)}</p>` : ''}
-        ${!item.confirmed ? `<span class="timeline-tbc">${escapeHtml(t('common.provisional'))}</span>` : ''}
-      </li>
-    `;
-  }).join('');
+  // Schedule TBD — nothing to render yet
 }
 
 /* ─────────────────────────────────────────────────────────────
@@ -886,8 +866,24 @@ function hideConfirmModal() {
 
 async function submitPayload(payload) {
   const submitBtn = document.getElementById('confirm-send-btn');
-  submitBtn.disabled    = true;
-  submitBtn.textContent = t('rsvp.sending');
+  const backBtn   = document.getElementById('confirm-back-btn');
+  const backdrop  = document.getElementById('confirm-backdrop');
+
+  const lockModal = () => {
+    submitBtn.disabled    = true;
+    submitBtn.textContent = t('rsvp.sending');
+    backBtn.disabled      = true;
+    if (backdrop) backdrop.style.pointerEvents = 'none';
+  };
+
+  const unlockModal = () => {
+    submitBtn.disabled    = false;
+    submitBtn.textContent = t('rsvp.confirmBtn');
+    backBtn.disabled      = false;
+    if (backdrop) backdrop.style.pointerEvents = '';
+  };
+
+  lockModal();
 
   // Spam: honeypot
   if (payload.honeypot) {
@@ -925,8 +921,7 @@ async function submitPayload(payload) {
     showError_rsvp();
     hideConfirmModal();
   } finally {
-    submitBtn.disabled    = false;
-    submitBtn.textContent = t('rsvp.confirmBtn');
+    unlockModal();
   }
 }
 
