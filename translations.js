@@ -104,6 +104,7 @@ const TRANSLATIONS = {
 
     rsvp: {
       title:             'RSVP',
+      plusOne:           'Come with whoever makes the trip more fun. Your partner and children are absolutely invited too. If you\'d otherwise be coming on your own, feel free to bring a +1 — your partner, a friend, or someone you\'d enjoy travelling and celebrating with. Just add everyone who\'s coming in the form below.',
       intro:             'Let us know you\'re coming and add everyone in your group.',
       deadline:          'Please confirm by {date}.',
       confirmAttending:  'Yes, we\'ll be there!',
@@ -180,6 +181,7 @@ const TRANSLATIONS = {
         title:   'Something went wrong.',
         message: 'Your RSVP could not be sent. Please try again or contact us directly.',
       },
+      retryBtn: 'Try again',
       devMode: 'RSVP endpoint not configured. Submission logged to console (development mode).',
       changeNote: 'Need to change your RSVP? Just get in touch with Liam or Valentina directly.',
       validation: {
@@ -456,6 +458,7 @@ const TRANSLATIONS = {
 
     rsvp: {
       title:            'Confirmeu assistència',
+      plusOne:          'Veniu amb qui vulgueu, amb qui faci que el viatge sigui més divertit. La vostra parella i els vostres fills també hi estan totalment convidats. Si veniu sols, no dubteu a portar un acompanyant: la vostra parella, un amic o algú amb qui us faci il·lusió viatjar i celebrar. Només cal que afegiu tothom qui vingui al formulari de sota.',
       intro:            'Feu-nos saber que vindreu i afegiu totes les persones del vostre grup.',
       deadline:         'Si us plau, confirmeu abans del {date}.',
       confirmAttending: 'Sí, hi serem!',
@@ -532,8 +535,9 @@ const TRANSLATIONS = {
         title:   'Alguna cosa ha fallat.',
         message: 'No hem pogut enviar la confirmació. Torneu-ho a provar o contacteu-nos directament.',
       },
+      retryBtn: 'Tornar a provar',
       devMode: 'URL del formulari no configurada. La resposta s\'ha registrat a la consola (mode de desenvolupament).',
-      changeNote: 'Necessites canviar la teva confirmació? Posa\'t en contacte directament amb el Liam o la Valentina.',
+      changeNote: 'Necessiteu canviar la vostra confirmació? Poseu-vos en contacte directament amb en Liam o la Valentina.',
       validation: {
         required:     'Aquest camp és obligatori.',
         emailInvalid: 'Introduïu una adreça electrònica vàlida.',
@@ -808,6 +812,7 @@ const TRANSLATIONS = {
 
     rsvp: {
       title:            'Conferma presenza',
+      plusOne:          'Venite con chi rende il viaggio più divertente. Il vostro partner e i vostri figli sono assolutamente invitati anche loro. Se altrimenti veniste da soli, sentitevi liberi di portare un accompagnatore: il vostro partner, un amico, o qualcuno con cui vi piacerebbe viaggiare e festeggiare. Aggiungete semplicemente tutti quelli che verranno nel modulo qui sotto.',
       intro:            'Fateci sapere che verrete e aggiungete tutti i componenti del vostro gruppo.',
       deadline:         'Vi chiediamo di confermare entro il {date}.',
       confirmAttending: 'Sì, ci saremo!',
@@ -871,7 +876,7 @@ const TRANSLATIONS = {
       },
       privacy:      'Le informazioni che condividete qui vengono utilizzate esclusivamente per organizzare il matrimonio.',
       submitBtn:    'Rivedi e invia',
-      confirmTitle: 'Controlla la tua conferma',
+      confirmTitle: 'Controllate la vostra conferma',
       confirmText:  'Rivedete i dati prima di inviare.',
       confirmBtn:   'Conferma e invia',
       backBtn:      'Torna e modifica',
@@ -884,8 +889,9 @@ const TRANSLATIONS = {
         title:   'Qualcosa è andato storto.',
         message: 'Non è stato possibile inviare la conferma. Riprovate o contattateci direttamente.',
       },
+      retryBtn: 'Riprova',
       devMode: 'Endpoint RSVP non configurato. I dati sono stati registrati nella console (modalità sviluppo).',
-      changeNote: 'Hai bisogno di modificare la tua conferma? Contatta direttamente Liam o Valentina.',
+      changeNote: 'Avete bisogno di modificare la vostra conferma? Contattate direttamente Liam o Valentina.',
       validation: {
         required:     'Questo campo è obbligatorio.',
         emailInvalid: 'Inserite un indirizzo email valido.',
@@ -1103,7 +1109,7 @@ const TRANSLATIONS = {
     },
 
     hero: {
-      welcome:  '¡Prepárense para bailar, comer y celebrar hasta que la noche sea nuestra!',
+      welcome:  '¡Preparaos para bailar, comer y celebrar hasta que la noche sea nuestra!',
       rsvpBtn:  'Confirmar asistencia',
       mapBtn:   'Cómo llegar',
     },
@@ -1152,7 +1158,7 @@ const TRANSLATIONS = {
       title:    'La celebración',
       intro:    'Todo lo que necesitáis saber sobre el día.',
       location: { title: 'Lugar' },
-      schedule: { title: 'Programa', comingSoon: '¡Programa próximamente — ¡estén atentos!' },
+      schedule: { title: 'Programa', comingSoon: '¡Programa disponible pronto, estad atentos!' },
       dresscode:{ title: 'Vestimenta y ambiente' },
       gifts:    { title: 'Regalos' },
       spotify:  { title: 'Playlist' },
@@ -1160,6 +1166,7 @@ const TRANSLATIONS = {
 
     rsvp: {
       title:            'Confirmación de asistencia',
+      plusOne:          'Venid con quien haga que el viaje sea más divertido. Vuestra pareja y vuestros hijos también están totalmente invitados. Si por lo demás vinierais solos, no dudéis en traer a un acompañante: vuestra pareja, un amigo o alguien con quien os apetezca viajar y celebrar. Solo tenéis que añadir a todos los que vengan en el formulario de abajo.',
       intro:            'Hacednos saber que vendréis y añadid a todas las personas de vuestro grupo.',
       deadline:         'Por favor, confirmad antes del {date}.',
       confirmAttending: '¡Sí, allí estaremos!',
@@ -1223,7 +1230,7 @@ const TRANSLATIONS = {
       },
       privacy:      'La información que compartís aquí se utiliza únicamente para organizar la boda.',
       submitBtn:    'Revisar y enviar',
-      confirmTitle: 'Comprueba tu confirmación',
+      confirmTitle: 'Comprobad vuestra confirmación',
       confirmText:  'Revisad los datos antes de enviar.',
       confirmBtn:   'Confirmar y enviar',
       backBtn:      'Volver y editar',
@@ -1236,13 +1243,14 @@ const TRANSLATIONS = {
         title:   'Algo ha salido mal.',
         message: 'No hemos podido enviar la confirmación. Intentadlo de nuevo o contactad con nosotros directamente.',
       },
+      retryBtn: 'Intentar de nuevo',
       devMode: 'Endpoint de RSVP no configurado. Los datos se han registrado en la consola (modo desarrollo).',
-      changeNote: '¿Necesitas cambiar tu confirmación? Ponte en contacto directamente con Liam o Valentina.',
+      changeNote: '¿Necesitáis cambiar vuestra confirmación? Poneos en contacto directamente con Liam o Valentina.',
       validation: {
         required:     'Este campo es obligatorio.',
         emailInvalid: 'Introduce una dirección de correo electrónico válida.',
-        noGuests:     'Añade al menos una persona a tu grupo.',
-        mustConsent:  'Marca la casilla para confirmar tus datos.',
+        noGuests:     'Añadid al menos una persona a vuestro grupo.',
+        mustConsent:  'Marcad la casilla para confirmar vuestros datos.',
         ageRequired:  'Introduce la edad de cada niño/a menor de 10 años.',
         nameRequired: 'Introduce el nombre de cada persona.',
         noPhone:      'Por favor, proporcionad el teléfono de al menos una persona de vuestro grupo.',
@@ -1512,6 +1520,7 @@ const TRANSLATIONS = {
 
     rsvp: {
       title:            'Confirmation de présence',
+      plusOne:          'Venez avec la personne qui rendra le voyage plus sympa. Votre partenaire et vos enfants sont bien sûr aussi invités. Si vous deviez sinon venir seul(e), n\'hésitez pas à venir accompagné(e) : votre partenaire, un(e) ami(e), ou quelqu\'un avec qui vous auriez plaisir à voyager et à fêter ça. Ajoutez simplement toutes les personnes qui viennent dans le formulaire ci-dessous.',
       intro:            'Dites-nous que vous serez là et ajoutez toutes les personnes de votre groupe.',
       deadline:         'Merci de confirmer avant le {date}.',
       confirmAttending: 'Oui, on sera là !',
@@ -1588,8 +1597,9 @@ const TRANSLATIONS = {
         title:   'Quelque chose s\'est mal passé.',
         message: 'Votre confirmation n\'a pas pu être envoyée. Réessayez ou contactez-nous directement.',
       },
+      retryBtn: 'Réessayer',
       devMode: 'Endpoint RSVP non configuré. Les données ont été enregistrées dans la console (mode développement).',
-      changeNote: 'Besoin de modifier ta confirmation ? Contacte directement Liam ou Valentina.',
+      changeNote: 'Besoin de modifier votre confirmation ? Contactez directement Liam ou Valentina.',
       validation: {
         required:     'Ce champ est obligatoire.',
         emailInvalid: 'Veuillez saisir une adresse e-mail valide.',
