@@ -1594,6 +1594,18 @@ input[type="radio"]:checked + span { font-weight: 500; }
   color: var(--text-muted);
 }
 
+@media (max-width: 479px) {
+  .confirm-summary-row {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+    text-align: center;
+  }
+
+  .confirm-summary-row dd {
+    text-align: center;
+  }
+}
+
 .confirm-modal__actions {
   display: flex;
   flex-direction: column;
@@ -1899,6 +1911,11 @@ input[type="radio"]:checked + span { font-weight: 500; }
   margin-bottom: var(--space-lg);
 }
 
+#whatsapp-action {
+  display: flex;
+  justify-content: center;
+}
+
 .section--alt .card .whatsapp-detail,
 .section--alt .card p {
   color: var(--text-muted);
@@ -2180,6 +2197,17 @@ input[type="radio"]:checked + span { font-weight: 500; }
   position: relative;
 }
 
+/* Decos are offset from the full-bleed section edge (so hero/alt
+   backgrounds stay edge-to-edge). On screens wider than the content
+   container this offset grows, keeping decos pinned near the centred
+   content instead of drifting toward the browser edges. */
+.section--hero,
+#barcelona,
+#other-events,
+#whatsapp {
+  --deco-edge: max(0px, calc((100% - var(--container)) / 2));
+}
+
 /* Content containers sit above all deco images */
 .section--hero .hero__inner,
 #event .container,
@@ -2193,7 +2221,7 @@ input[type="radio"]:checked + span { font-weight: 500; }
 
 /* Mermaid / siren — right side, raised from the very bottom */
 .deco--mermaid {
-  right: 0;
+  right: var(--deco-edge);
   bottom: 5%;
   width: 250px;
   mix-blend-mode: screen;
@@ -2210,18 +2238,18 @@ input[type="radio"]:checked + span { font-weight: 500; }
 }
 /* Left of the pair — further from edge, leans right toward partner */
 .deco--hero-flute-r {
-  right: 11rem;
+  right: calc(var(--deco-edge) + 11rem);
   transform: rotate(20deg);
 }
 /* Right of the pair — closer to edge, leans left toward partner */
 .deco--hero-flute-l {
-  right: 1rem;
+  right: calc(var(--deco-edge) + 1rem);
   transform: rotate(-20deg);
 }
 
 /* Bubbles — right side, floating in toward the card (mirrors cocktail on the left) */
 .deco--hero-bubbles {
-  right: clamp(2rem, 12vw, 13rem);
+  right: calc(var(--deco-edge) + clamp(2rem, 12vw, 13rem));
   bottom: 22%;
   width: 115px;
   mix-blend-mode: screen;
@@ -2231,7 +2259,7 @@ input[type="radio"]:checked + span { font-weight: 500; }
 /* Cocktails trio — bottom-left, opposite side of the hero */
 /* Wine & glass — bottom-left, opposite side of the hero */
 .deco--hero-wine {
-  left: 3rem;
+  left: calc(var(--deco-edge) + 3rem);
   bottom: 5%;
   width: 220px;
   mix-blend-mode: screen;
@@ -2240,7 +2268,7 @@ input[type="radio"]:checked + span { font-weight: 500; }
 
 /* Bubbled — playful cluster, top-left corner, tilted */
 .deco--hero-bubbled {
-  left: 2rem;
+  left: calc(var(--deco-edge) + 2rem);
   top: 2rem;
   width: 125px;
   transform: rotate(-14deg);
@@ -2250,7 +2278,7 @@ input[type="radio"]:checked + span { font-weight: 500; }
 
 /* Cocktail coupe — floats in closer to the card, midway down */
 .deco--hero-cocktail {
-  left: clamp(2rem, 12vw, 13rem);
+  left: calc(var(--deco-edge) + clamp(2rem, 12vw, 13rem));
   top: 40%;
   width: 165px;
   transform: rotate(9deg);
@@ -2288,7 +2316,7 @@ input[type="radio"]:checked + span { font-weight: 500; }
 
 /* Lemon branch — other events, pulled in toward the centre column */
 .deco--lemon {
-  right: clamp(2rem, 12vw, 7rem);
+  right: calc(var(--deco-edge) + clamp(2rem, 12vw, 7rem));
   bottom: 2rem;
   width: 115px;
   mix-blend-mode: multiply;
@@ -2297,7 +2325,7 @@ input[type="radio"]:checked + span { font-weight: 500; }
 
 /* Wine & glass — other events, pulled in toward the centre column */
 .deco--wine {
-  left: clamp(1.5rem, 12vw, 6rem);
+  left: calc(var(--deco-edge) + clamp(1.5rem, 12vw, 6rem));
   bottom: 1.5rem;
   width: 82px;
   mix-blend-mode: multiply;
@@ -2307,7 +2335,7 @@ input[type="radio"]:checked + span { font-weight: 500; }
 /* Cocktail trio — WhatsApp section right
    Dark gradient bg + screen blend → melts into navy */
 .deco--cocktails {
-  right: 0.5rem;
+  right: calc(var(--deco-edge) + 0.5rem);
   bottom: 0;
   width: 270px;
   mix-blend-mode: screen;
@@ -2316,7 +2344,7 @@ input[type="radio"]:checked + span { font-weight: 500; }
 
 /* Nautilus shell — Barcelona section, bottom-left, biggest of the bunch */
 .deco--barcelona-shell {
-  left: 0.5rem;
+  left: calc(var(--deco-edge) + 0.5rem);
   bottom: 0.5rem;
   width: 220px;
   transform: rotate(11deg);
@@ -2326,7 +2354,7 @@ input[type="radio"]:checked + span { font-weight: 500; }
 
 /* Scallop shell — Other events, pulled in toward the centre column */
 .deco--other-events-shell {
-  right: clamp(1.5rem, 10vw, 6rem);
+  right: calc(var(--deco-edge) + clamp(1.5rem, 10vw, 6rem));
   top: 1.5rem;
   width: 95px;
   transform: rotate(-9deg);
@@ -2336,7 +2364,7 @@ input[type="radio"]:checked + span { font-weight: 500; }
 
 /* Scallop shell (variant) — WhatsApp section, top-left, tilted the other way */
 .deco--whatsapp-shell {
-  left: 1.5rem;
+  left: calc(var(--deco-edge) + 1.5rem);
   top: 1.5rem;
   width: 115px;
   transform: rotate(13deg);
