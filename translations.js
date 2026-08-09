@@ -230,7 +230,7 @@ const TRANSLATIONS = {
           'Food and drinks in Barcelona generally aren\'t too expensive, but around the main tourist attractions there are definitely places charging tourist prices for very average food.',
           'Check the menu and prices before sitting down. Also, if every single person eating there looks like a tourist, I would probably keep walking.',
           'And don\'t judge bars too much by how they look. Some of the very normal neighbourhood bars, the classic "bares de la vida", are often where you\'ll eat really well for very little money.',
-          'I also have an endless list of places for breakfast, lunch, dinner, drinks, vermouth, coffee, basically everything, so just ask me if you want recommendations.',
+          'Vale has an endless list of places for breakfast, lunch, dinner, drinks, vermouth, coffee, basically everything, so just ask her if you want recommendations.',
         ],
       },
       tips: {
@@ -582,7 +582,7 @@ const TRANSLATIONS = {
           'Menjar i beure a Barcelona en general no sol ser gaire car, però al voltant de les atraccions turístiques principals sí que hi ha llocs que cobren preus de turista per menjar molt normalet.',
           'Mireu la carta i els preus abans de seure. I si totes les persones que hi mengen semblen turistes, jo probablement seguiria caminant.',
           'I no jutgeu els bars només per l\'aspecte. Alguns dels bars de barri més normals, els clàssics "bars de tota la vida", són sovint on menjareu molt bé per molt poc.',
-          'A més, tinc una llista infinita de llocs per esmorzar, dinar, sopar, prendre una copa, vermut, cafè, bàsicament de tot, així que només cal que me\'l demaneu si voleu recomanacions.',
+          'A més, la Vale té una llista infinita de llocs per esmorzar, dinar, sopar, prendre una copa, vermut, cafè, bàsicament de tot, així que només cal que li ho demaneu si voleu recomanacions.',
         ],
       },
       tips: {
@@ -934,7 +934,7 @@ const TRANSLATIONS = {
           'Mangiare e bere a Barcellona in genere non è troppo caro, ma intorno alle principali attrazioni turistiche ci sono sicuramente posti che fanno pagare prezzi da turisti per un cibo molto nella media.',
           'Controllate il menù e i prezzi prima di sedervi. E se tutte le persone sedute lì sembrano turisti, io probabilmente continuerei a camminare.',
           'E non giudicate troppo i bar dall\'aspetto. Alcuni dei bar di quartiere più semplici, i classici "bares de la vida", sono spesso i posti dove si mangia benissimo spendendo pochissimo.',
-          'Ho anche una lista infinita di posti per colazione, pranzo, cena, aperitivo, vermouth, caffè, praticamente di tutto, quindi chiedetemi pure se volete qualche consiglio.',
+          'Vale ha una lista infinita di posti per colazione, pranzo, cena, aperitivo, vermouth, caffè, praticamente di tutto, quindi chiedetele pure se volete qualche consiglio.',
         ],
       },
       tips: {
@@ -1286,7 +1286,7 @@ const TRANSLATIONS = {
           'Comer y beber en Barcelona en general no suele ser muy caro, pero alrededor de las atracciones turísticas principales sí hay sitios que cobran precios de turista por una comida bastante normalita.',
           'Mirad la carta y los precios antes de sentaros. Y si todas las personas que están comiendo ahí parecen turistas, yo probablemente seguiría caminando.',
           'Y no juzguéis los bares solo por su aspecto. Algunos de los bares de barrio más sencillos, los clásicos "bares de la vida", son a menudo donde mejor comeréis por muy poco dinero.',
-          'Además, tengo una lista infinita de sitios para desayunar, comer, cenar, tomar algo, vermú, café, básicamente de todo, así que preguntadme si queréis recomendaciones.',
+          'Además, Vale tiene una lista infinita de sitios para desayunar, comer, cenar, tomar algo, vermú, café, básicamente de todo, así que preguntadle si queréis recomendaciones.',
         ],
       },
       tips: {
@@ -1638,7 +1638,7 @@ const TRANSLATIONS = {
           'Manger et boire à Barcelone n\'est en général pas trop cher, mais autour des principales attractions touristiques, il y a clairement des endroits qui font payer des prix de touristes pour une cuisine très moyenne.',
           'Vérifiez la carte et les prix avant de vous asseoir. Et si toutes les personnes attablées ont l\'air de touristes, je continuerais probablement mon chemin.',
           'Et ne jugez pas trop les bars sur leur apparence. Certains des bars de quartier les plus simples, les fameux "bares de la vida", sont souvent ceux où vous mangerez le mieux pour vraiment pas cher.',
-          'J\'ai aussi une liste infinie d\'adresses pour le petit-déjeuner, le déjeuner, le dîner, prendre un verre, un vermouth, un café, bref, pour tout, alors demandez-moi si vous voulez des recommandations.',
+          'Vale a aussi une liste infinie d\'adresses pour le petit-déjeuner, le déjeuner, le dîner, prendre un verre, un vermouth, un café, bref, pour tout, alors demandez-lui si vous voulez des recommandations.',
         ],
       },
       tips: {
