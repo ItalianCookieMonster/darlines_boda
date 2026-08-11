@@ -27,7 +27,7 @@ const SITE_CONFIG = {
   // Leave as empty string '' if not yet available.
   rsvpEndpoint:         'https://script.google.com/macros/s/AKfycbxVCOZP0vMqdyY68Am_r-MdmSOMQpSIJe1JMl3iAwZKOfHBTIQLxc7zJgPKyrF_X61m/exec',          // Google Apps Script web app URL
   googleMapsUrl:        'https://www.google.com/maps/place/Estaci%C3%B3+de+Fran%C3%A7a/@41.3841122,2.1850552,17.14z/data=!4m6!3m5!1s0x12a4a301a3a606f7:0x750b54cb434df4f1!8m2!3d41.3840447!4d2.1865787!16s%2Fm%2F02qp6kh?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D',          // Full Google Maps URL for the venue
-  spotifyPlaylistUrl:   'https://open.spotify.com/playlist/5RWVguwYQW1hEpZAypkMo5?si=elRAGGLDR7qM58QXRQ0iyQ&utm_source=copy-link&pt=eb356f4d15a4a366c874cfe8a845955d&pi=hXO_sWyLR6qNT',          // Shared Spotify playlist URL
+  spotifyPlaylistUrl:   'https://open.spotify.com/playlist/5RWVguwYQW1hEpZAypkMo5?si=SmwmMtBISVeOd6eTr-v4Cw',          // Shared Spotify playlist URL
   whatsappCommunityUrl: 'https://chat.whatsapp.com/FHwOxR4gWUK9gDpYHADV25?s=sh&p=i&mlu=4&amv=1',          // WhatsApp community / group invite URL
 
   // ── Contact ───────────────────────────────────────────────────
