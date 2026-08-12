@@ -200,20 +200,6 @@ function applyConfigLinks() {
     }
   }
 
-  // Spotify
-  const spotifyBtn          = document.getElementById('spotify-btn');
-  const spotifyNotConfigured= document.getElementById('spotify-not-configured');
-  if (spotifyBtn) {
-    if (SITE_CONFIG.spotifyPlaylistUrl) {
-      spotifyBtn.href    = SITE_CONFIG.spotifyPlaylistUrl;
-      spotifyBtn.hidden  = false;
-      if (spotifyNotConfigured) spotifyNotConfigured.hidden = true;
-    } else {
-      spotifyBtn.hidden  = true;
-      if (spotifyNotConfigured) spotifyNotConfigured.hidden = false;
-    }
-  }
-
   // WhatsApp
   const waBtn          = document.getElementById('whatsapp-btn');
   const waNotConfigured= document.getElementById('whatsapp-not-configured');
